@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+.perspective {
+  perspective: 1200px;
+}
+
+.rotate-x-70 {
+  transform: rotateX(70deg);
+}
+
+.rotate-x-0 {
+  transform: rotateX(0deg);
+}
+
