@@ -22,7 +22,6 @@
 
 ---
 
-
 <div aligh=left>
 <h2>Requisitos</h2>
 </div>
@@ -42,7 +41,6 @@ git --version
 
 ---
 
-
 <div aligh=left>
 <h2>Clonar el repositorio</h2>
 </div>
@@ -59,7 +57,6 @@ cd empresa-web
 
 ---
 
-
 <div aligh=left>
 <h2>Instalar dependencias</h2>
 </div>
@@ -69,7 +66,6 @@ npm install
 ```
 
 ---
-
 
 <div aligh=left>
 <h2>Ejecutar TailwindCSS</h2>
@@ -85,7 +81,6 @@ Este comando debe permanecer ejecutándose mientras se desarrolla el proyecto.
 
 ---
 
-
 <div aligh=left>
 <h2>Ejecutar el proyecto</h2>
 </div>
@@ -94,7 +89,6 @@ Este comando debe permanecer ejecutándose mientras se desarrolla el proyecto.
 - Se recomienda la extensión **Live Server** de Visual Studio Code.
 
 ---
-
 
 <div aligh=left>
 <h2>Reglas del proyecto</h2>
@@ -106,17 +100,7 @@ Este comando debe permanecer ejecutándose mientras se desarrolla el proyecto.
 - Antes de realizar un Pull Request verificar que todo funcione correctamente.
 - Resolver conflictos antes de integrar cambios.
 
-
 ---
-
-<div aligh=left>
-<h2>Licencia</h2>
-</div>
-
-Este proyecto está bajo la Licencia MIT. Para más detalles, consulta el archivo [LICENSE](LICENSE).
-
----
-
 
 <div aligh=left>
 <h2>Organización de integrantes</h2>
@@ -130,8 +114,7 @@ Este proyecto está bajo la Licencia MIT. Para más detalles, consulta el archiv
 
 > **Cristian Barraza** - Productos - Api Clima
 > <br>
-<br>
-
+> <br>
 
 > [!NOTE]
 > Proyecto en desarrollo

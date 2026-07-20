@@ -1,16 +1,493 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/output.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio</title>
+  <link rel="stylesheet" href="css/output.css" />
 </head>
+<body class="bg-[#F8FAFC]">
+  <div class="absolute inset-0 -z-10 overflow-hidden">
+    <div class="absolute w-48 h-48 bg-cyan-400/30 rotate-12 top-20 left-20"></div>
+    <div class="absolute w-48 h-48 bg-cyan-400/30 -rotate-12 top-20 right-20"></div>
+    <div class="absolute w-52 h-52 bg-cyan-400/30 rotate-6 bottom-20 right-30"></div>
+    <div class="absolute w-52 h-52 bg-cyan-400/30 -rotate-6 bottom-20 left-30"></div>
+  </div>
 
-<body class="bg-gray-100">
-    <h1 class="text-4xl text-blue-600 font-bold text-center mt-10">
-        ECI Tech
-    </h1>
+  <!-- HEADER -->
+  <header class="flex justify-center pt-5 md:pt-9 px-2 md:px-4">
+    <nav class="w-[790px] max-w-full h-14 bg-[#292929] rounded-2xl flex items-center justify-between px-2 relative">
+      <div class="flex items-center gap-2.5">
+        <img src="img/logo.png" alt="ECI Tech" class="w-8 h-8 rounded-lg object-cover" />
+        <h1 class="text-white text-lg font-bold">ECI Tech</h1>
+      </div>
+      <ul class="hidden md:flex gap-13 text-white text-sm">
+        <li><a href="/nosotros" class="hover:text-cyan-500 duration-300">Nosotros</a></li>
+        <li><a href="/galeria" class="hover:text-cyan-500 duration-300">Galería</a></li>
+        <li><a href="/servicios" class="hover:text-cyan-500 duration-300">Servicios</a></li>
+        <li><a href="/contacto" class="hover:text-cyan-500 duration-300">Contacto</a></li>
+      </ul>
+      <a href="/login" class="hidden md:block text-sm font-medium bg-cyan-500 text-white px-7 py-2.5 rounded-xl hover:scale-105 duration-300">Empezar</a>
+      <button id="menu-btn" class="md:hidden text-white text-2xl px-2">☰</button>
+      <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-[#0c0c0d] rounded-2xl p-6 z-50">
+        <ul class="flex flex-col items-center gap-5 text-white text-sm">
+          <li><a href="/nosotros" class="hover:text-cyan-500 duration-300">Nosotros</a></li>
+          <li><a href="/galeria" class="hover:text-cyan-500 duration-300">Galería</a></li>
+          <li><a href="/servicios" class="hover:text-cyan-500 duration-300">Servicios</a></li>
+          <li><a href="/contacto" class="hover:text-cyan-500 duration-300">Contacto</a></li>
+          <li><a href="/login" class="bg-cyan-500 px-7 py-2.5 rounded-xl">Empezar</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="max-w-7xl mx-auto mt-20 md:mt-30 text-center px-5">
+    <h2 class="text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#292929]">
+      Soluciones digitales <br />que
+      <span class="text-cyan-500"> impulsan tu negocio </span>
+    </h2>
+    <p class="text-sm md:text-lg max-w-3xl text-gray-500 mx-auto mt-6 md:mt-10">
+      Desarrollamos landing pages y sitios web modernos con interfaces
+      intuitivas, diseño responsivo y tecnología actual. En ECI Tech
+      convertimos ideas en proyectos digitales que destacan por su velocidad,
+      calidad y experiencia de usuario.
+    </p>
+    <div class="flex justify-center gap-3 md:gap-5 mt-15">
+      <a href="/contacto" class="bg-white rounded-xl px-4 py-3.5 text-sm md:px-8 md:py-3 md:text-base shadow-lg hover:shadow-xl duration-300">Agenda diagnostico</a>
+      <a href="/servicios" class="bg-cyan-500 text-white rounded-xl px-4 py-3.5 text-sm md:px-8 md:py-3 md:text-base hover:shadow-xl duration-300">Nuestros servicios</a>
+    </div>
+  </section>
+
+ <!-- IMAGEN 3D REVEAL -->
+    <section class="mt-2 px-5">
+      <div class="perspective max-w-4xl mx-auto">
+        <div
+          id="mockup"
+          class="opacity-0 translate-y-15 rotate-x-110 transition-all duration-700 ease-out"
+        >
+          <img
+            src="img/scroll.png"
+            alt="ECI Tech Preview"
+            class="w-full rounded-2xl shadow-2xl"
+          />
+        </div>
+      </div>
+    </section>
+
+  <!-- PROCESO DE TRABAJO -->
+  <section class="bg-[#292929] py-30 px-5">
+    <div class="max-w-6xl mx-auto text-center">
+      <span class="inline-block bg-cyan-500/10 text-cyan-400 text-xs font-semibold tracking-wide px-4 py-1.5 rounded-full border border-cyan-500/30">CÓMO TRABAJAMOS</span>
+      <h2 class="text-3xl md:text-5xl font-semibold text-white mt-2 leading-tight">
+        Proceso de desarrollo de <br class="hidden md:block" />
+        software profesional
+      </h2>
+      <p class="text-sm md:text-base text-gray-400 max-w-2xl mx-auto mt-3">Metodología probada que garantiza entregas a tiempo y proyectos exitosos</p>
+      <div class="grid md:grid-cols-3 gap-13 mt-17 text-left">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 duration-300">
+          <span class="text-3xl font-bold text-cyan-400">01</span>
+          <h3 class="text-lg font-semibold text-white mt-3">Descubrimiento</h3>
+          <p class="text-sm text-gray-400 mt-2">Entendemos tu negocio, objetivos y usuarios. Definimos alcance y requerimientos detallados.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 duration-300">
+          <span class="text-3xl font-bold text-cyan-400">02</span>
+          <h3 class="text-lg font-semibold text-white mt-3">Diseño &amp; Arquitectura</h3>
+          <p class="text-sm text-gray-400 mt-2">Creamos wireframes, prototipos y definimos la arquitectura técnica del sistema.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 duration-300">
+          <span class="text-3xl font-bold text-cyan-400">03</span>
+          <h3 class="text-lg font-semibold text-white mt-3">Desarrollo Ágil</h3>
+          <p class="text-sm text-gray-400 mt-2">Sprints de 2 semanas con demos constantes. Siempre sabrás el avance de tu proyecto.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 duration-300">
+          <span class="text-3xl font-bold text-cyan-400">04</span>
+          <h3 class="text-lg font-semibold text-white mt-3">Testing &amp; QA</h3>
+          <p class="text-sm text-gray-400 mt-2">Pruebas exhaustivas de funcionalidad, seguridad y rendimiento antes de cada entrega.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 duration-300">
+          <span class="text-3xl font-bold text-cyan-400">05</span>
+          <h3 class="text-lg font-semibold text-white mt-3">Lanzamiento</h3>
+          <p class="text-sm text-gray-400 mt-2">Deployment controlado con monitoreo 24/7 y capacitación a tu equipo.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 duration-300">
+          <span class="text-3xl font-bold text-cyan-400">06</span>
+          <h3 class="text-lg font-semibold text-white mt-3">Soporte Continuo</h3>
+          <p class="text-sm text-gray-400 mt-2">Mantenimiento, actualizaciones y soporte técnico para que tu sistema siempre funcione.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section class="py-8 px-5">
+    <div class="max-w-6xl mx-auto text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-semibold text-[#292929] mt-6 leading-tight">
+        Proyectos que <br class="hidden md:block" />
+        transformaron negocios
+      </h2>
+      <p class="text-sm md:text-base text-gray-500 max-w-2xl mx-auto mt-3">Algunos de los sitios y aplicaciones que hemos desarrollado para nuestros clientes</p>
+    </div>
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-9">
+      <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
+        <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
+          <span><img src="img/moda-urbana.jpeg" /></span>
+          <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
+            <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
+          </div>
+        </div>
+        <div class="p-6">
+          <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Tienda online + pasarela de pagos</span>
+          <h3 class="text-lg font-semibold text-[#292929] mt-2">Moda Urbana</h3>
+          <p class="text-sm text-gray-500 mt-2">Migración de tienda física a canal digital con catálogo completo, checkout optimizado y sincronización de inventario en tiempo real entre sucursales.</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Shopify</span>
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Stripe</span>
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Cloudflare</span>
+          </div>
+        </div>
+      </div>
+      <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
+        <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
+          <span><img src="img/cafe.jpeg" /></span>
+          <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
+            <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
+          </div>
+        </div>
+        <div class="p-6">
+          <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Landing + sistema de reservas</span>
+          <h3 class="text-lg font-semibold text-[#292929] mt-2">Café Aroma</h3>
+          <p class="text-sm text-gray-500 mt-2">Landing page para cadena de cafeterías con menú digital actualizable, reservas de mesa en línea y galería pensada para conversión desde redes sociales.</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Next.js</span>
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Tailwind CSS</span>
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Cloudflare</span>
+          </div>
+        </div>
+      </div>
+      <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
+        <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
+          <span><img src="img/FinTrack.jpeg" /></span>
+          <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
+            <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
+          </div>
+        </div>
+        <div class="p-6">
+          <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Dashboard financiero</span>
+          <h3 class="text-lg font-semibold text-[#292929] mt-2">FinTrack</h3>
+          <p class="text-sm text-gray-500 mt-2">Plataforma de control de gastos para pymes con reportes en tiempo real, roles de usuario y exportación automática de estados financieros.</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">React</span>
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Node.js</span>
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+      <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
+        <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
+          <span><img src="img/vidasana.jpeg" /></span>
+          <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
+            <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
+          </div>
+        </div>
+        <div class="p-6">
+          <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Sitio corporativo + citas en línea</span>
+          <h3 class="text-lg font-semibold text-[#292929] mt-2">Clínica VidaSana</h3>
+          <p class="text-sm text-gray-500 mt-2">Sitio institucional para clínica multidisciplinaria con agenda de citas integrada, perfiles de especialistas y formulario de admisión de pacientes.</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">WordPress</span>
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Cloudflare</span>
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Google Calendar API</span>
+          </div>
+        </div>
+      </div>
+      <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
+        <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
+          <span><img src="img/ruta.jpeg" /></span>
+          <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
+            <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
+          </div>
+        </div>
+        <div class="p-6">
+          <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">App de logística</span>
+          <h3 class="text-lg font-semibold text-[#292929] mt-2">Ruta Verde</h3>
+          <p class="text-sm text-gray-500 mt-2">Aplicación web para optimizar rutas de recolección de reciclaje, con seguimiento en tiempo real y panel administrativo para operadores.</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">React</span>
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Google Maps API</span>
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Firebase</span>
+          </div>
+        </div>
+      </div>
+      <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
+        <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
+          <span><img src="img/despacho.jpeg" /></span>
+          <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
+            <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
+          </div>
+        </div>
+        <div class="p-6">
+          <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Sitio corporativo legal</span>
+          <h3 class="text-lg font-semibold text-[#292929] mt-2">Torres &amp; Asociados</h3>
+          <p class="text-sm text-gray-500 mt-2">Presencia digital para despacho legal con áreas de práctica, casos de éxito y formulario de consulta confidencial con cifrado.</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Next.js</span>
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Cloudflare</span>
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">SendGrid</span>
+          </div>
+        </div>
+      </div>
+      <div class="proyecto-extra hidden group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
+        <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
+          <span><img src="img/gym.jpeg" /></span>
+          <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
+            <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
+          </div>
+        </div>
+        <div class="p-6">
+          <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Landing + reservas de clases</span>
+          <h3 class="text-lg font-semibold text-[#292929] mt-2">GymPro</h3>
+          <p class="text-sm text-gray-500 mt-2">Landing comercial para cadena de gimnasios con reserva de clases grupales, planes de membresía y pago recurrente automatizado.</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Vue.js</span>
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Stripe</span>
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Cloudflare</span>
+          </div>
+        </div>
+      </div>
+      <div class="proyecto-extra hidden group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
+        <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
+          <span><img src="img/constructora.jpeg" /></span>
+          <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
+            <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
+          </div>
+        </div>
+        <div class="p-6">
+          <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Sitio corporativo + portafolio de obras</span>
+          <h3 class="text-lg font-semibold text-[#292929] mt-2">Constructora Horizonte</h3>
+          <p class="text-sm text-gray-500 mt-2">Sitio corporativo con portafolio de proyectos construidos, línea de tiempo de la empresa y formulario de cotización para nuevos desarrollos.</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">WordPress</span>
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Cloudflare</span>
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Google Analytics</span>
+          </div>
+        </div>
+      </div>
+      <div class="proyecto-extra hidden group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
+        <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
+          <span><img src="img/cursos.jpeg" /></span>
+          <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
+            <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
+          </div>
+        </div>
+        <div class="p-6">
+          <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Plataforma de cursos</span>
+          <h3 class="text-lg font-semibold text-[#292929] mt-2">EduOnline</h3>
+          <p class="text-sm text-gray-500 mt-2">Plataforma de e-learning con reproducción de video, seguimiento de progreso por alumno y certificados descargables al completar cada curso.</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">React</span>
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">AWS S3</span>
+            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Stripe</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center mt-10">
+      <button id="btnVerMas" onclick="toggleProyectos()" class="bg-[#292929] cursor-pointer text-white text-sm font-medium px-8 py-3 rounded-xl hover:bg-[#383838] duration-300">Ver más proyectos</button>
+    </div>
+  </section>
+
+  <!-- PRECIOS -->
+  <section class="py-20 px-4">
+    <div class="text-center max-w-2xl mx-auto mb-5">
+      <h2 class="text-3xl md:text-5xl font-semibold text-[#292929] mt-2 leading-tight">
+       Precios para cada necesidad
+      </h2>
+      <p class="text-gray-500 mt-3">Planes diseñados para cada necesidad. Elige la opción ideal para tu proyecto.</p>
+    </div>
+    <div class="flex justify-center mb-13">
+      <div class="bg-gray-100 rounded-full p-1 flex text-sm font-medium">
+        <button id="btnMensual" onclick="setPlan('mensual')" class="px-5 py-2 rounded-full bg-white shadow text-gray-900">Mensual</button>
+        <button id="btnAnual" onclick="setPlan('anual')" class="px-5 py-2 rounded-full text-gray-500">Anual</button>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto items-stretch">
+      <article class="p-8 min-h-[590px] flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">Básico</h2>
+        <p class="text-sm text-gray-500 mt-2">Para proyectos pequeños</p>
+        <h3 class="text-5xl font-bold text-gray-900 mt-8">$9<span class="text-base text-gray-400 font-normal">/<span class="periodo">mes</span></span></h3>
+        <button class="w-full bg-[#292929] text-white rounded-xl py-2 mt-8 hover:bg-gray-800 duration-300">Comenzar</button>
+        <ul class="mt-8 space-y-4 text-sm text-gray-600">
+          <li>✓ 1 usuario</li>
+          <li>✓ 10 proyectos</li>
+          <li>✓ Diseño responsivo</li>
+          <li>✓ Soporte básico</li>
+          <li>✓ Actualizaciones semanales</li>
+          <li>✓ Exportación de datos básica</li>
+        </ul>
+      </article>
+      <article class="p-8 min-h-[520px] flex flex-col rounded-2xl bg-cyan-500 text-white shadow-xl scale-105">
+        <h2 class="text-xl font-semibold">Pro</h2>
+        <p class="text-sm text-cyan-100 mt-2">Para empresas en crecimiento</p>
+        <h3 class="text-5xl font-bold mt-8">$29<span class="text-base font-normal text-cyan-100">/<span class="periodo">mes</span></span></h3>
+        <button class="w-full bg-[#292929] text-white rounded-xl py-2 mt-8 hover:bg-gray-800 duration-300">Comenzar</button>
+        <ul class="mt-8 space-y-4 text-cyan-50 text-sm">
+          <li>✓ 5 usuarios</li>
+          <li>✓ Proyectos ilimitados</li>
+          <li>✓ Optimización web</li>
+          <li>✓ Diseño UI/UX</li>
+          <li>✓ Soporte prioritario</li>
+          <li>✓ Análisis de rendimiento</li>
+          <li>✓ Dominio personalizado</li>
+        </ul>
+      </article>
+      <article class="p-8 min-h-[520px] flex flex-col">
+        <h2 class="text-xl font-semibold text-gray-900">Empresarial</h2>
+        <p class="text-sm text-gray-500 mt-2">Para grandes equipos</p>
+        <h3 class="text-5xl font-bold text-gray-900 mt-8">$59<span class="text-base text-gray-400 font-normal">/<span class="periodo">mes</span></span></h3>
+        <button class="w-full bg-[#292929] text-white rounded-xl py-2 mt-8 hover:bg-gray-800 duration-300">Comenzar</button>
+        <ul class="mt-8 space-y-4 text-sm text-gray-600">
+          <li>✓ Usuarios ilimitados</li>
+          <li>✓ Proyectos ilimitados</li>
+          <li>✓ Integraciones avanzadas</li>
+          <li>✓ Soporte premium</li>
+          <li>✓ Seguridad reforzada</li>
+          <li>✓ Gerente de cuenta dedicado</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="py-15 px-5">
+    <div class="max-w-3xl mx-auto text-center mb-13">
+      <span class="rounded-full border border-gray-200 bg-white px-4 py-1 text-xs font-semibold tracking-wide text-black">TESTIMONIOS</span>
+      <h2 class="mt-3 text-3xl font-semibold leading-tight text-[#292929] md:text-5xl">Nuestros clientes nos respaldan</h2>
+      <p class="mt-3 text-sm text-gray-500 md:text-base">Empresas de distintos rubros han confiado en nosotros para llevar su negocio al mundo digital. Esto es lo que opinan.</p>
+    </div>
+    <div class="mx-auto max-w-6xl columns-1 gap-6 space-y-6 md:columns-3">
+      <div class="break-inside-avoid rounded-2xl bg-[#F5F5F5] p-7">
+        <p class="text-sm leading-relaxed text-[#292929]">Desde que ECI Tech relanzó nuestra tienda en línea, las ventas por internet subieron muchísimo. El equipo entendió exactamente lo que necesitábamos y entregó a tiempo, algo que no siempre encontramos con otras agencias. La comunicación durante todo el proyecto fue clara y constante. Además, el nuevo diseño es increíblemente rápido y los clientes ahora pueden navegar y comprar sin interrupciones, lo que ha impulsado nuestro crecimiento de forma notable.</p>
+        <div class="mt-6 flex items-center gap-3">
+          <div class="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-500 text-xs font-semibold text-white">LR</div>
+          <div>
+            <p class="text-sm font-semibold text-[#292929]">Laura Ramírez</p>
+            <p class="text-xs text-gray-500">Dueña, Moda Urbana</p>
+          </div>
+        </div>
+      </div>
+      <div class="break-inside-avoid rounded-2xl bg-[#F5F5F5] p-7">
+        <p class="text-sm leading-relaxed text-[#292929]">El sistema de reservas que nos hicieron redujo las llamadas al negocio casi a la mitad. Ahora los clientes reservan su mesa desde el celular sin ningún problema.</p>
+        <div class="mt-6 flex items-center gap-3">
+          <div class="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-500 text-xs font-semibold text-white">DM</div>
+          <div>
+            <p class="text-sm font-semibold text-[#292929]">Diego Martínez</p>
+            <p class="text-xs text-gray-500">Gerente, Café Aroma</p>
+          </div>
+        </div>
+      </div>
+      <div class="break-inside-avoid rounded-2xl bg-[#F5F5F5] p-7">
+        <p class="text-sm leading-relaxed text-[#292929]">Buscábamos algo simple para controlar los gastos de la empresa y terminamos con un dashboard que hasta nuestro contador usa a diario. Los reportes automáticos nos ahorran horas cada semana.</p>
+        <div class="mt-6 flex items-center gap-3">
+          <div class="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-500 text-xs font-semibold text-white">PS</div>
+          <div>
+            <p class="text-sm font-semibold text-[#292929]">Paola Sánchez</p>
+            <p class="text-xs text-gray-500">CFO, FinTrack</p>
+          </div>
+        </div>
+      </div>
+      <div class="break-inside-avoid rounded-2xl bg-[#F5F5F5] p-7">
+        <p class="text-sm leading-relaxed text-[#292929]">La agenda de citas en línea cambió por completo la forma en que organizamos a los especialistas. Los pacientes agendan solos y nosotros solo confirmamos. El soporte después del lanzamiento también fue excelente, siempre respondieron rápido ante cualquier duda o ajuste que necesitábamos hacer.</p>
+        <div class="mt-6 flex items-center gap-3">
+          <div class="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-500 text-xs font-semibold text-white">MC</div>
+          <div>
+            <p class="text-sm font-semibold text-[#292929]">Mariana Cortés</p>
+            <p class="text-xs text-gray-500">Directora, Clínica VidaSana</p>
+          </div>
+        </div>
+      </div>
+      <div class="break-inside-avoid rounded-2xl bg-[#F5F5F5] p-7">
+        <p class="text-sm leading-relaxed text-[#292929]">Nos entregaron la app de rutas antes de la fecha prometida y sin ningún error grave en el lanzamiento. Rara vez pasa eso con proyectos de software.</p>
+        <div class="mt-6 flex items-center gap-3">
+          <div class="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-500 text-xs font-semibold text-white">JO</div>
+          <div>
+            <p class="text-sm font-semibold text-[#292929]">Javier Ortiz</p>
+            <p class="text-xs text-gray-500">Operaciones, Ruta Verde</p>
+          </div>
+        </div>
+      </div>
+      <div class="break-inside-avoid rounded-2xl bg-[#F5F5F5] p-7">
+        <p class="text-sm leading-relaxed text-[#292929]">El sitio nuevo nos dio una imagen mucho más seria frente a clientes corporativos. El formulario de consulta confidencial era justo lo que necesitábamos para nuestra área legal, y el equipo lo resolvió sin complicaciones.</p>
+        <div class="mt-6 flex items-center gap-3">
+          <div class="flex h-9 w-9 items-center justify-center rounded-full bg-cyan-500 text-xs font-semibold text-white">RT</div>
+          <div>
+            <p class="text-sm font-semibold text-[#292929]">Roberto Torres</p>
+            <p class="text-xs text-gray-500">Socio, Torres & Asociados</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/home.js"></script>
 </body>
+
+<footer class="bg-white relative overflow-hidden antialiased [font-synthesis:none]">
+  <div class="relative flex justify-center items-end pt-24 md:pt-15">
+    <h1 class="text-[120px] sm:text-[160px] md:text-[210px] font-semibold text-transparent [-webkit-text-stroke:1px_rgba(0,0,0,0.4)] leading-[0.75] select-none -mb-4 md:-mb-6.5 opacity-50">ECI Tech</h1>
+  </div>
+  <div class="relative bg-cyan-500 z-10 min-h-[400px]">
+    <div class="absolute inset-0 z-0 pointer-events-none opacity-20 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-16 md:py-24 flex flex-col lg:flex-row justify-between gap-16 lg:gap-8">
+      <div class="flex flex-col justify-between max-w-sm w-full">
+        <div class="flex flex-col">
+          <img src="img/logo-footer2.png" alt="ECI Tech" class="w-9 h-9 rounded-lg object-cover mb-2.5" />
+          <h2 class="text-white text-xl md:text-[22px] font-medium leading-tight">Transformando ideas<br>en soluciones digitales</h2>
+        </div>
+
+        <!-- logos -->
+        <div class="flex flex-col gap-3 mt-12 lg:mt-auto pt-8">
+          <svg width="312" height="34" viewBox="0 0 312 34" fill="none" xmlns="http://www.w3.org/2000/svg" class="shrink-0 w-[180px] md:w-[200px] h-auto">
+            <path d="M12.673 20.703L18.427 28.375H26.885L17.39 15.714L25.29 6.625H22.088L15.905 13.737L10.573 6.625H2.115L11.189 18.727L2.803 28.375H6.005L12.673 20.703ZM19.635 25.958L6.948 9.042H9.364L22.052 25.958H19.635Z" fill="#FFFFFF" />
+            <path d="M68.75 5.75C69.413 5.75 70.049 6.013 70.518 6.482C70.987 6.951 71.25 7.587 71.25 8.25V25.75C71.25 26.413 70.987 27.049 70.518 27.518C70.049 27.987 69.413 28.25 68.75 28.25H51.25C50.587 28.25 49.951 27.987 49.482 27.518C49.013 27.049 48.75 26.413 48.75 25.75V8.25C48.75 7.587 49.013 6.951 49.482 6.482C49.951 6.013 50.587 5.75 51.25 5.75H68.75ZM68.125 25.125V18.5C68.125 17.419 67.696 16.383 66.931 15.618C66.167 14.854 65.131 14.425 64.05 14.425C62.987 14.425 61.75 15.075 61.15 16.05V14.662H57.663V25.125H61.15V18.962C61.15 18 61.925 17.212 62.888 17.212C63.352 17.212 63.797 17.397 64.125 17.725C64.453 18.053 64.638 18.498 64.638 18.962V25.125H68.125ZM53.6 12.7C54.157 12.7 54.691 12.479 55.085 12.085C55.479 11.691 55.7 11.157 55.7 10.6C55.7 9.438 54.763 8.488 53.6 8.488C53.04 8.488 52.502 8.71 52.106 9.106C51.71 9.502 51.487 10.04 51.487 10.6C51.487 11.762 52.438 12.7 53.6 12.7ZM55.337 25.125V14.662H51.875V25.125H55.337Z" fill="#FFFFFF" />
+            <path d="M124.167 17C124.167 9.18 117.82 2.833 110 2.833C102.18 2.833 95.833 9.18 95.833 17C95.833 23.857 100.707 29.566 107.167 30.883V21.25H104.333V17H107.167V13.458C107.167 10.724 109.391 8.5 112.125 8.5H115.667V12.75H112.833C112.054 12.75 111.417 13.387 111.417 14.167V17H115.667V21.25H111.417V31.096C118.571 30.387 124.167 24.352 124.167 17Z" fill="#FFFFFF" />
+            <path d="M167.458 12.922C165.619 6.078 159.292 6.506 159.292 6.506C159.292 6.506 150.542 5.923 150.542 17C150.542 28.078 159.292 27.495 159.292 27.495C159.292 27.495 164.493 27.841 166.875 22.924C167.653 20.757 167.458 16.422 159.875 16.422C159.875 16.422 156.375 16.422 156.375 19.339C156.375 20.478 157.542 21.672 159.292 21.672C161.042 21.672 162.991 20.474 163.375 18.172C164.542 11.172 158.125 10.589 156.375 13.506" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M200.1 6.333H209.9C213.633 6.333 216.667 9.367 216.667 13.1V22.9C216.667 24.695 215.954 26.416 214.685 27.685C213.416 28.954 211.695 29.667 209.9 29.667H200.1C196.367 29.667 193.333 26.633 193.333 22.9V13.1C193.333 11.305 194.046 9.584 195.315 8.315C196.584 7.046 198.305 6.333 200.1 6.333ZM199.867 8.667C198.753 8.667 197.684 9.109 196.897 9.897C196.109 10.684 195.667 11.753 195.667 12.867V23.133C195.667 25.455 197.545 27.333 199.867 27.333H210.133C211.247 27.333 212.315 26.891 213.103 26.103C213.891 25.316 214.333 24.247 214.333 23.133V12.867C214.333 10.545 212.455 8.667 210.133 8.667H199.867ZM211.125 10.417C211.512 10.417 211.883 10.57 212.156 10.844C212.43 11.117 212.583 11.488 212.583 11.875C212.583 12.262 212.43 12.633 212.156 12.906C211.883 13.18 211.512 13.333 211.125 13.333C210.738 13.333 210.367 13.18 210.094 12.906C209.82 12.633 209.667 12.262 209.667 11.875C209.667 11.488 209.82 11.117 210.094 10.844C210.367 10.57 210.738 10.417 211.125 10.417ZM205 12.167C206.547 12.167 208.031 12.781 209.125 13.875C210.219 14.969 210.833 16.453 210.833 18C210.833 19.547 210.219 21.031 209.125 22.125C208.031 23.219 206.547 23.833 205 23.833C203.453 23.833 201.969 23.219 200.875 22.125C199.781 21.031 199.167 19.547 199.167 18C199.167 16.453 199.781 14.969 200.875 13.875C201.969 12.781 203.453 12.167 205 12.167ZM205 14.5C204.072 14.5 203.181 14.869 202.525 15.525C201.869 16.181 201.5 17.072 201.5 18C201.5 18.928 201.869 19.819 202.525 20.475C203.181 21.131 204.072 21.5 205 21.5C205.928 21.5 206.818 21.131 207.475 20.475C208.131 19.819 208.5 18.928 208.5 18C208.5 17.072 208.131 16.181 207.475 15.525C206.818 14.869 205.928 14.5 205 14.5Z" fill="#FFFFFF" />
+          </svg>
+          <p class="font-light text-white/80 text-xs md:text-[13px] mt-1">© 2026 ECI Tech, todos los derechos reservados</p>
+        </div>
+      </div>
+      <div class="flex gap-12 md:gap-24 flex-wrap lg:flex-nowrap">
+        <div class="flex flex-col gap-5">
+          <h3 class="text-white font-semibold text-lg md:text-xl">Navegación</h3>
+          <ul class="flex flex-col gap-3 md:gap-4">
+            <li><a href="/" class="text-white/70 hover:text-white transition-colors text-sm md:text-[15px] font-medium">Inicio</a></li>
+            <li><a href="/galeria" class="text-white/70 hover:text-white transition-colors text-sm md:text-[15px] font-medium">Galeria</a></li>
+            <li><a href="/contacto" class="text-white/70 hover:text-white transition-colors text-sm md:text-[15px] font-medium">Contacto</a></li>
+            <li><a href="/nosotros" class="text-white/70 hover:text-white transition-colors text-sm md:text-[15px] font-medium">Nosotros</a></li>
+            <li><a href="/servicios" class="text-white/70 hover:text-white transition-colors text-sm md:text-[15px] font-medium">Servicios</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-5">
+          <h3 class="text-white font-semibold text-lg md:text-xl">Redes</h3>
+          <ul class="flex flex-col gap-3 md:gap-4">
+            <li><a href="#" class="text-white/70 hover:text-white transition-colors text-sm md:text-[15px] font-medium">X</a></li>
+            <li><a href="#" class="text-white/70 hover:text-white transition-colors text-sm md:text-[15px] font-medium">Threads</a></li>
+            <li><a href="#" class="text-white/70 hover:text-white transition-colors text-sm md:text-[15px] font-medium">Linkedln</a></li>
+            <li><a href="#" class="text-white/70 hover:text-white transition-colors text-sm md:text-[15px] font-medium">Facebook</a></li>
+            <li><a href="#" class="text-white/70 hover:text-white transition-colors text-sm md:text-[15px] font-medium">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-5">
+          <h3 class="text-white font-semibold text-lg md:text-xl">Contacto</h3>
+          <ul class="flex flex-col gap-3 md:gap-4">
+            <li><a href="#" class="text-white/70 hover:text-white transition-colors text-sm md:text-[15px] font-medium">+52 921 123 4567</a></li>
+            <li><a href="#" class="text-white/70 hover:text-white transition-colors text-sm md:text-[15px] font-medium">Nanchital, Veracruz</a></li>
+            <li><a href="#" class="text-white/70 hover:text-white transition-colors text-sm md:text-[15px] font-medium">contacto@ecitech.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 </html>
