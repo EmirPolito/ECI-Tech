@@ -198,31 +198,17 @@
   }
 }
 @layer utilities {
-<<<<<<< HEAD
-  .mt-10 {
-    margin-top: calc(var(--spacing) * 10);
-  }
-=======
   .mx-auto {
     margin-inline: auto;
   }
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
   }
-  .mt-5 {
-    margin-top: calc(var(--spacing) * 5);
-  }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
-  }
-  .mt-15 {
-    margin-top: calc(var(--spacing) * 15);
-  }
-  .mt-20 {
-    margin-top: calc(var(--spacing) * 20);
   }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
@@ -242,9 +228,6 @@
   .inline-block {
     display: inline-block;
   }
-  .table {
-    display: table;
-  }
   .h-44 {
     height: calc(var(--spacing) * 44);
   }
@@ -259,12 +242,6 @@
   }
   .max-w-7xl {
     max-width: var(--container-7xl);
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -301,10 +278,6 @@
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .bg-blue-600 {
     background-color: var(--color-blue-600);
   }
@@ -317,7 +290,6 @@
   .bg-gray-50 {
     background-color: var(--color-gray-50);
   }
->>>>>>> cristian-productos
   .bg-gray-100 {
     background-color: var(--color-gray-100);
   }
@@ -409,8 +381,6 @@
   .text-blue-600 {
     color: var(--color-blue-600);
   }
-<<<<<<< HEAD
-=======
   .text-cyan-50 {
     color: var(--color-cyan-50);
   }
@@ -438,16 +408,9 @@
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .shadow-md {
     --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
@@ -494,22 +457,10 @@
   inherits: false;
   initial-value: 0;
 }
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
->>>>>>> cristian-productos
-}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
-<<<<<<< HEAD
-@layer properties {
-  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
-    *, ::before, ::after, ::backdrop {
-      --tw-font-weight: initial;
-=======
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
@@ -579,16 +530,10 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-space-y-reverse: 0;
-      --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-tracking: initial;
       --tw-shadow: 0 0 #0000;
@@ -605,8 +550,6 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-outline-style: solid;
->>>>>>> cristian-productos
     }
   }
 }
