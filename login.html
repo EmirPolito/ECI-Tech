@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECI Tech — Iniciar sesión</title>
+<link rel="stylesheet" href="css/output.css" />
+</head>
+
+<body class="min-h-screen bg-[#eef2f6] font-['Segoe_UI',Roboto,-apple-system,Helvetica,Arial,sans-serif] text-ink antialiased relative overflow-x-hidden m-0">
+
+   <!-- HEADER -->
+  <header class="flex justify-center pt-5 md:pt-9 px-2 md:px-4">
+    <nav class="w-[790px] max-w-full h-14 bg-[#292929] rounded-2xl flex items-center justify-between px-2 relative">
+      <div class="flex items-center gap-2.5">
+        <a href="/"><img src="img/logo.png" alt="ECI Tech" class="w-8 h-8 rounded-lg object-cover" /></a>
+        <a href="/"><h1 class="text-white text-lg font-bold">ECI Tech</h1></a>
+      </div>
+      <ul class="hidden md:flex gap-13  mr-4 text-white text-sm">
+        <li><a href="/nosotros" class="hover:text-cyan-500 duration-300">Nosotros</a></li>
+        <li><a href="/galeria" class="hover:text-cyan-500 duration-300">Galería</a></li>
+        <li><a href="/servicios" class="hover:text-cyan-500 duration-300">Servicios</a></li>
+        <li><a href="/contacto" class="hover:text-cyan-500 duration-300">Contacto</a></li>
+        <li><a href="/" class="hover:text-cyan-500 duration-300">Inicio</a></li>
+      </ul>
+      <button id="menu-btn" class="md:hidden text-white text-2xl px-2">☰</button>
+      <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-[#0c0c0d] rounded-2xl p-6 z-50">
+        <ul class="flex flex-col items-center gap-5 text-white text-sm">
+          <li><a href="/nosotros" class="hover:text-cyan-500 duration-300">Nosotros</a></li>
+          <li><a href="/galeria" class="hover:text-cyan-500 duration-300">Galería</a></li>
+          <li><a href="/servicios" class="hover:text-cyan-500 duration-300">Servicios</a></li>
+          <li><a href="/contacto" class="hover:text-cyan-500 duration-300">Contacto</a></li>
+          <li><a href="/login" class="bg-cyan-500 px-7 py-2.5 rounded-xl">Empezar</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN PAGE WRAPPER -->
+  <div class="min-h-[calc(100vh-100px)] flex items-center justify-center p-6 md:p-10 relative overflow-hidden">
+      
+    <!-- Decorative Corner Triangles -->
+    <div class="absolute bg-teal opacity-85 w-[220px] h-[220px] -top-[60px] -left-[60px] [clip-path:polygon(0_0,100%_0,0_100%)] pointer-events-none"></div>
+    <div class="absolute bg-teal opacity-50 w-[140px] h-[140px] top-0 right-[120px] [clip-path:polygon(100%_0,100%_100%,0_0)] pointer-events-none"></div>
+    <div class="absolute bg-teal opacity-85 w-[260px] h-[260px] -bottom-[80px] -right-[80px] [clip-path:polygon(100%_100%,0_100%,100%_0)] pointer-events-none"></div>
+    <div class="absolute bg-teal opacity-50 w-[120px] h-[180px] bottom-[60px] left-0 [clip-path:polygon(0_0,100%_40%,0_100%)] pointer-events-none"></div>
+
+    <div class="relative z-20 grid grid-cols-1 lg:grid-cols-[1.05fr_0.85fr] gap-16 max-w-[1180px] w-full items-center">
+      
+      <!-- LEFT SIDE / HERO -->
+      <div class="flex flex-col">
+
+        <h2 class="text-4xl md:text-[40px] leading-[1.15] m-0 mb-[22px] font-extrabold text-ink">Bienvenido<br><span class="text-teal">de nuevo</span></h2>
+        <p class="text-ink-soft text-[15px] leading-[1.6] max-w-[420px] m-0 mb-9">Inicia sesión para acceder a tu cuenta y continuar gestionando tus soluciones de software.</p>
+
+        <div class="flex flex-col gap-[22px] mb-10">
+          <div class="flex gap-3.5 items-start">
+            <div class="flex-none w-[36px] h-[36px] rounded-[10px] bg-teal-light flex items-center justify-center text-teal-dark">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <div>
+              <h3 class="m-0 mb-[3px] text-[14.5px] font-bold text-ink">Acceso seguro</h3>
+              <p class="m-0 text-[13.5px] text-ink-soft leading-[1.5] max-w-[360px]">Protegemos tu información y la de tu negocio.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-3.5 items-start">
+            <div class="flex-none w-[36px] h-[36px] rounded-[10px] bg-teal-light flex items-center justify-center text-teal-dark">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+            </div>
+            <div>
+              <h3 class="m-0 mb-[3px] text-[14.5px] font-bold text-ink">Gestiona tus proyectos</h3>
+              <p class="m-0 text-[13.5px] text-ink-soft leading-[1.5] max-w-[360px]">Administra, monitorea y escala tus soluciones fácilmente.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-3.5 items-start">
+            <div class="flex-none w-[36px] h-[36px] rounded-[10px] bg-teal-light flex items-center justify-center text-teal-dark">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+            </div>
+            <div>
+              <h3 class="m-0 mb-[3px] text-[14.5px] font-bold text-ink">Impulsa tu negocio</h3>
+              <p class="m-0 text-[13.5px] text-ink-soft leading-[1.5] max-w-[360px]">Software diseñado para crecer contigo y con tus clientes.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative w-full max-w-[420px] h-[170px] hidden lg:block">
+          <svg viewBox="0 0 420 170" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto block">
+            <!-- laptop -->
+            <rect x="10" y="10" width="230" height="130" rx="8" fill="#1c2733"/>
+            <rect x="18" y="18" width="214" height="106" rx="4" fill="#f4f7f9"/>
+            <rect x="0" y="140" width="250" height="10" rx="4" fill="#dfe5ea"/>
+            <rect x="26" y="30" width="80" height="8" rx="2" fill="#c8d2da"/>
+            <rect x="26" y="46" width="190" height="60" rx="6" fill="#ffffff" stroke="#e3e8ee"/>
+            <polyline points="34,96 60,72 84,84 110,58 136,68 160,44 190,60" fill="none" stroke="#16b8b0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- phone -->
+            <rect x="255" y="35" width="80" height="135" rx="14" fill="#1c2733"/>
+            <rect x="262" y="48" width="66" height="102" rx="3" fill="#ffffff"/>
+            <rect x="270" y="58" width="50" height="6" rx="2" fill="#c8d2da"/>
+            <circle cx="295" cy="100" r="18" fill="none" stroke="#16b8b0" stroke-width="4"/>
+            <rect x="270" y="130" width="50" height="6" rx="2" fill="#e3e8ee"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE / CARD -->
+      <div class="bg-white rounded-[20px] px-10 pt-11 pb-[34px] shadow-[0_20px_45px_rgba(20,40,60,.10)] w-full max-w-[430px] justify-self-center lg:justify-self-end">
+        <h2 class="m-0 mb-2 text-2xl font-extrabold text-center text-ink">Iniciar sesión</h2>
+        <p class="m-0 mb-[26px] text-[13px] text-center text-ink-soft leading-[1.5]">Ingresa tus credenciales para acceder<br>a tu cuenta</p>
+
+        <form id="loginForm">
+          <div class="mb-[18px]">
+            <label for="email" class="block text-[13px] font-semibold text-ink mb-[6px]">Correo electrónico</label>
+            <div class="relative flex items-center border border-[#e3e8ee] rounded-[10px] bg-[#fbfcfd] focus-within:border-teal focus-within:ring-4 focus-within:ring-teal/15 transition-all">
+              <svg class="ml-3 text-[#93a1ad] flex-none" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18v12H3z"/><path d="M3 6l9 7 9-7"/></svg>
+              <input type="email" id="email" placeholder="tu@empresa.com" required class="border-0 outline-0 bg-transparent py-[11px] px-3 text-[14px] w-full text-ink placeholder-[#a7b2bc]">
+            </div>
+          </div>
+
+          <div class="mb-[18px]">
+            <label for="password" class="block text-[13px] font-semibold text-ink mb-[6px]">Contraseña</label>
+            <div class="relative flex items-center border border-[#e3e8ee] rounded-[10px] bg-[#fbfcfd] focus-within:border-teal focus-within:ring-4 focus-within:ring-teal/15 transition-all">
+              <svg class="ml-3 text-[#93a1ad] flex-none" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 1 1 8 0v3"/></svg>
+              <input type="password" id="password" placeholder="••••••••" required class="border-0 outline-0 bg-transparent py-[11px] px-3 text-[14px] w-full text-ink placeholder-[#a7b2bc]">
+              <button type="button" class="bg-transparent border-0 cursor-pointer mr-2.5 text-[#93a1ad] flex items-center p-1 hover:text-ink-soft transition-colors" id="togglePass" aria-label="Mostrar contraseña">
+                <svg id="eyeIcon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between my-[2px] mb-[22px] text-[13px]">
+            <label class="flex items-center gap-[7px] text-ink-soft cursor-pointer"><input type="checkbox" class="w-[15px] h-[15px] accent-teal"> Recordarme</label>
+            <a href="#" class="text-teal-dark font-semibold hover:underline">¿Olvidaste tu contraseña?</a>
+          </div>
+
+          <button type="submit" class="w-full py-3 border-0 rounded-[10px] bg-teal text-white text-[14.5px] font-bold cursor-pointer hover:bg-teal-dark active:translate-y-[1px] transition-all">Iniciar sesión</button>
+        </form>
+
+        <div class="flex items-center gap-3 my-6 text-[#a7b2bc] text-[12.5px] before:content-[''] before:flex-1 before:h-[1px] before:bg-[#e3e8ee] after:content-[''] after:flex-1 after:h-[1px] after:bg-[#e3e8ee]">o continúa con</div>
+
+        <button type="button" class="w-full flex items-center justify-center gap-2.5 py-[11px] border border-[#e3e8ee] rounded-[10px] bg-white text-[13.5px] font-semibold text-ink cursor-pointer mb-3 hover:bg-[#f7f9fa] hover:border-[#d3dae1] transition-all" id="googleBtn">
+          <svg width="17" height="17" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9 3.6l6.7-6.7C35.9 2.4 30.4 0 24 0 14.6 0 6.5 5.4 2.5 13.2l7.8 6.1C12.2 13.4 17.6 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.6-4.9 7.3l7.6 5.9c4.4-4.1 7.1-10.1 7.1-17.7z"/><path fill="#FBBC05" d="M10.3 19.3c-.5 1.4-.8 2.9-.8 4.7s.3 3.3.8 4.7l-7.8 6.1C.9 31.6 0 27.9 0 24s.9-7.6 2.5-10.8l7.8 6.1z"/><path fill="#34A853" d="M24 48c6.4 0 11.9-2.1 15.8-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.2 2.3-6.4 0-11.8-3.9-13.7-9.4l-7.8 6.1C6.5 42.6 14.6 48 24 48z"/></svg>
+          Continuar con Google
+        </button>
+
+        <button type="button" class="w-full flex items-center justify-center gap-2.5 py-[11px] border border-[#e3e8ee] rounded-[10px] bg-white text-[13.5px] font-semibold text-ink cursor-pointer mb-3 hover:bg-[#f7f9fa] hover:border-[#d3dae1] transition-all" id="msBtn">
+          <svg width="16" height="16" viewBox="0 0 23 23"><rect x="1" y="1" width="10" height="10" fill="#F35325"/><rect x="12" y="1" width="10" height="10" fill="#81BC06"/><rect x="1" y="12" width="10" height="10" fill="#05A6F0"/><rect x="12" y="12" width="10" height="10" fill="#FFBA08"/></svg>
+          Continuar con Microsoft
+        </button>
+
+        <p class="text-center text-[13px] text-ink-soft mt-[18px]">¿No tienes cuenta? <a href="#" class="text-teal-dark font-bold hover:underline">Regístrate</a></p>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Password visibility toggle
+    const toggleBtn = document.getElementById('togglePass');
+    const passInput = document.getElementById('password');
+    const eyeIcon = document.getElementById('eyeIcon');
+
+    toggleBtn.addEventListener('click', () => {
+      const isPass = passInput.type === 'password';
+      passInput.type = isPass ? 'text' : 'password';
+      eyeIcon.innerHTML = isPass
+        ? '<path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a20.6 20.6 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 7 11 7a20.6 20.6 0 0 1-2.16 3.19M14.12 14.12a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>'
+        : '<path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/>';
+    });
+
+    document.getElementById('loginForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Inicio de sesión simulado ✅\n(Aquí conectarías tu backend / API)');
+    });
+
+    document.getElementById('googleBtn').addEventListener('click', () => alert('Continuar con Google (integración pendiente)'));
+    document.getElementById('msBtn').addEventListener('click', () => alert('Continuar con Microsoft (integración pendiente)'));
+  </script>
+</body>
+</html>
