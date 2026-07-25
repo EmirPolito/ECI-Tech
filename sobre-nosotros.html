@@ -28,21 +28,34 @@
 <style>
   body { font-family: 'Poppins', sans-serif; }
 
-  /* Cuadrados decorativos: flotación suave */
-  @keyframes floatSquare {
-    0%, 100% { transform: translateY(0) rotate(var(--r)); }
-    50% { transform: translateY(-18px) rotate(var(--r)); }
+  /* --- Animaciones agregadas (no modifican el código original) --- */
+  @keyframes floatSquare1 {
+    0%, 100% { transform: translateY(0) rotate(18deg); }
+    50% { transform: translateY(-18px) rotate(18deg); }
   }
-  .float-square { animation: floatSquare 7s ease-in-out infinite; }
+  @keyframes floatSquare2 {
+    0%, 100% { transform: translateY(0) rotate(-12deg); }
+    50% { transform: translateY(-18px) rotate(-12deg); }
+  }
+  @keyframes floatSquare3 {
+    0%, 100% { transform: translateY(0) rotate(15deg); }
+    50% { transform: translateY(-18px) rotate(15deg); }
+  }
+  @keyframes floatSquare4 {
+    0%, 100% { transform: translateY(0) rotate(-10deg); }
+    50% { transform: translateY(-18px) rotate(-10deg); }
+  }
+  .float-square-1 { animation: floatSquare1 7s ease-in-out infinite; }
+  .float-square-2 { animation: floatSquare2 7s ease-in-out infinite 1.2s; }
+  .float-square-3 { animation: floatSquare3 7s ease-in-out infinite 0.6s; }
+  .float-square-4 { animation: floatSquare4 7s ease-in-out infinite 1.8s; }
 
-  /* Navbar: entrada al cargar la página */
   @keyframes navIn {
     from { opacity: 0; transform: translateY(-16px); }
     to { opacity: 1; transform: translateY(0); }
   }
   .nav-in { animation: navIn 0.7s ease-out both; }
 
-  /* Hero: entrada al cargar la página */
   @keyframes heroIn {
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
@@ -50,7 +63,6 @@
   .hero-in-1 { animation: heroIn 0.8s ease-out 0.15s both; }
   .hero-in-2 { animation: heroIn 0.8s ease-out 0.35s both; }
 
-  /* Reveal on scroll para el resto de secciones */
   .reveal {
     opacity: 0;
     transform: translateY(32px);
@@ -62,15 +74,16 @@
   }
   .reveal-delay-1 { transition-delay: 0.1s; }
   .reveal-delay-2 { transition-delay: 0.25s; }
+  .reveal-delay-3 { transition-delay: 0.4s; }
 </style>
 </head>
 <body class="bg-slate-50 text-brand-dark overflow-x-hidden">
 
   <!-- Decorative rotated squares -->
-  <div style="--r:18deg" class="float-square pointer-events-none absolute top-10 left-[-60px] w-56 h-56 bg-brand-cyanlight rotate-[18deg] rounded-2xl opacity-90 -z-0"></div>
-  <div style="--r:-12deg; animation-delay:1.2s;" class="float-square pointer-events-none absolute top-[420px] left-[130px] w-48 h-48 bg-brand-cyanlight rotate-[-12deg] rounded-2xl opacity-90 -z-0"></div>
-  <div style="--r:15deg; animation-delay:0.6s;" class="float-square pointer-events-none absolute top-24 right-[-40px] w-52 h-52 bg-brand-cyanlight rotate-[15deg] rounded-2xl opacity-90 -z-0"></div>
-  <div style="--r:-10deg; animation-delay:1.8s;" class="float-square pointer-events-none absolute top-[430px] right-[100px] w-56 h-56 bg-brand-cyanlight rotate-[-10deg] rounded-2xl opacity-90 -z-0"></div>
+  <div class="float-square-1 pointer-events-none absolute top-10 left-[-60px] w-56 h-56 bg-brand-cyanlight rotate-[18deg] rounded-2xl opacity-90 -z-0"></div>
+  <div class="float-square-2 pointer-events-none absolute top-[420px] left-[130px] w-48 h-48 bg-brand-cyanlight rotate-[-12deg] rounded-2xl opacity-90 -z-0"></div>
+  <div class="float-square-3 pointer-events-none absolute top-24 right-[-40px] w-52 h-52 bg-brand-cyanlight rotate-[15deg] rounded-2xl opacity-90 -z-0"></div>
+  <div class="float-square-4 pointer-events-none absolute top-[430px] right-[100px] w-56 h-56 bg-brand-cyanlight rotate-[-10deg] rounded-2xl opacity-90 -z-0"></div>
 
   <!-- Navbar -->
   <header class="nav-in relative z-20 max-w-6xl mx-auto pt-6 px-4">
@@ -80,12 +93,12 @@
         <span class="text-white font-bold text-lg">ECI Tech</span>
       </div>
       <ul class="hidden md:flex items-center gap-8 text-white/90 text-sm font-medium">
-        <li><a href="#" class="hover:text-brand-cyan transition-colors duration-300">Nosotros</a></li>
-        <li><a href="#" class="hover:text-brand-cyan transition-colors duration-300">Galería</a></li>
-        <li><a href="#" class="hover:text-brand-cyan transition-colors duration-300">Servicios</a></li>
-        <li><a href="#" class="hover:text-brand-cyan transition-colors duration-300">Contacto</a></li>
+        <li><a href="#" class="hover:text-brand-cyan transition">Nosotros</a></li>
+        <li><a href="#" class="hover:text-brand-cyan transition">Galería</a></li>
+        <li><a href="#" class="hover:text-brand-cyan transition">Servicios</a></li>
+        <li><a href="#" class="hover:text-brand-cyan transition">Contacto</a></li>
       </ul>
-      <a href="#" class="bg-brand-cyan text-brand-dark font-semibold text-sm px-5 py-2 rounded-full transition-transform duration-300 hover:scale-105 hover:brightness-95">Empezar</a>
+      <a href="#" class="bg-brand-cyan text-brand-dark font-semibold text-sm px-5 py-2 rounded-full hover:brightness-95 transition hover:scale-105">Empezar</a>
     </nav>
   </header>
 
@@ -113,7 +126,7 @@
         que convierta visitas en clientes.
       </p>
     </div>
-    <div class="reveal reveal-delay-1 bg-white rounded-2xl shadow-lg p-8 border border-slate-100 transition-shadow duration-300 hover:shadow-xl">
+    <div class="reveal reveal-delay-1 bg-white rounded-2xl shadow-lg p-8 border border-slate-100">
       <div class="grid grid-cols-2 gap-6 text-center">
         <div>
           <p class="text-3xl font-extrabold text-brand-cyan">+50</p>
@@ -137,7 +150,7 @@
 
   <!-- Misión y Visión -->
   <section class="relative z-10 max-w-5xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-8">
-    <div class="reveal bg-white rounded-2xl shadow-md p-8 border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+    <div class="reveal bg-white rounded-2xl shadow-md p-8 border border-slate-100">
       <div class="w-12 h-12 bg-brand-cyan/10 rounded-xl flex items-center justify-center mb-5">
         <div class="w-5 h-5 bg-brand-cyan rounded-md"></div>
       </div>
@@ -148,7 +161,7 @@
         reflejen la identidad de su negocio.
       </p>
     </div>
-    <div class="reveal reveal-delay-1 bg-white rounded-2xl shadow-md p-8 border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+    <div class="reveal reveal-delay-1 bg-white rounded-2xl shadow-md p-8 border border-slate-100">
       <div class="w-12 h-12 bg-brand-cyan/10 rounded-xl flex items-center justify-center mb-5">
         <div class="w-5 h-5 bg-brand-cyan rounded-md"></div>
       </div>
@@ -167,23 +180,23 @@
       <h2 class="text-3xl font-bold mt-3">Nuestros Valores</h2>
     </div>
     <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
-      <div class="reveal text-center px-4 transition-transform duration-300 hover:-translate-y-2">
-        <div class="w-14 h-14 bg-brand-cyan rounded-2xl mx-auto mb-4 transition-transform duration-300 hover:rotate-6"></div>
+      <div class="reveal text-center px-4">
+        <div class="w-14 h-14 bg-brand-cyan rounded-2xl mx-auto mb-4"></div>
         <h4 class="font-semibold mb-2">Calidad</h4>
         <p class="text-slate-500 text-sm">Cuidamos cada detalle en el diseño y desarrollo de tu sitio.</p>
       </div>
-      <div class="reveal reveal-delay-1 text-center px-4 transition-transform duration-300 hover:-translate-y-2">
-        <div class="w-14 h-14 bg-brand-cyan rounded-2xl mx-auto mb-4 transition-transform duration-300 hover:rotate-6"></div>
+      <div class="reveal reveal-delay-1 text-center px-4">
+        <div class="w-14 h-14 bg-brand-cyan rounded-2xl mx-auto mb-4"></div>
         <h4 class="font-semibold mb-2">Cercanía</h4>
         <p class="text-slate-500 text-sm">Acompañamos a nuestros clientes en todo el proceso.</p>
       </div>
-      <div class="reveal reveal-delay-2 text-center px-4 transition-transform duration-300 hover:-translate-y-2">
-        <div class="w-14 h-14 bg-brand-cyan rounded-2xl mx-auto mb-4 transition-transform duration-300 hover:rotate-6"></div>
+      <div class="reveal reveal-delay-2 text-center px-4">
+        <div class="w-14 h-14 bg-brand-cyan rounded-2xl mx-auto mb-4"></div>
         <h4 class="font-semibold mb-2">Innovación</h4>
         <p class="text-slate-500 text-sm">Usamos tecnología actual para resultados modernos.</p>
       </div>
-      <div class="reveal text-center px-4 transition-transform duration-300 hover:-translate-y-2" style="transition-delay:0.4s">
-        <div class="w-14 h-14 bg-brand-cyan rounded-2xl mx-auto mb-4 transition-transform duration-300 hover:rotate-6"></div>
+      <div class="reveal reveal-delay-3 text-center px-4">
+        <div class="w-14 h-14 bg-brand-cyan rounded-2xl mx-auto mb-4"></div>
         <h4 class="font-semibold mb-2">Compromiso</h4>
         <p class="text-slate-500 text-sm">Cumplimos tiempos y objetivos en cada proyecto.</p>
       </div>
@@ -196,7 +209,7 @@
     <p class="text-slate-600 mb-8 max-w-xl mx-auto">
       Conversemos sobre tu proyecto y descubramos juntos cómo llevar tu marca al mundo digital.
     </p>
-    <a href="#" class="inline-block bg-brand-cyan text-brand-dark font-semibold px-8 py-3 rounded-full transition-transform duration-300 hover:scale-105 hover:brightness-95">
+    <a href="#" class="inline-block bg-brand-cyan text-brand-dark font-semibold px-8 py-3 rounded-full hover:brightness-95 transition hover:scale-105">
       Contáctanos
     </a>
   </section>
