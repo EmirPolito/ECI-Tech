@@ -16,20 +16,20 @@
         <a href="/"><h1 class="text-white text-lg font-bold">ECI Tech</h1></a>
       </div>
       <ul class="hidden md:flex gap-13 mr-4 text-white text-sm">
-        <li><a href="/nosotros" class="hover:text-cyan-500 duration-300">Nosotros</a></li>
-        <li><a href="/galeria" class="hover:text-cyan-500 duration-300">Galería</a></li>
-        <li><a href="/servicios" class="hover:text-cyan-500 duration-300">Servicios</a></li>
-        <li><a href="/contacto" class="hover:text-cyan-500 duration-300">Contacto</a></li>
-        <li><a href="/" class="hover:text-cyan-500 duration-300">Inicio</a></li>
+        <li><a href="nosotros.html" class="hover:text-cyan-500 duration-300">Nosotros</a></li>
+        <li><a href="galeria.html" class="hover:text-cyan-500 duration-300">Galería</a></li>
+        <li><a href="servicios.html" class="hover:text-cyan-500 duration-300">Servicios</a></li>
+        <li><a href="contacto.html" class="hover:text-cyan-500 duration-300">Contacto</a></li>
+        <li><a href="index.html" class="hover:text-cyan-500 duration-300">Inicio</a></li>
       </ul>
       <button id="menu-btn" class="md:hidden text-white text-2xl px-2">☰</button>
       <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-[#0c0c0d] rounded-2xl p-6 z-50">
         <ul class="flex flex-col items-center gap-5 text-white text-sm">
-          <li><a href="/nosotros" class="hover:text-cyan-500 duration-300">Nosotros</a></li>
-          <li><a href="/galeria" class="hover:text-cyan-500 duration-300">Galería</a></li>
-          <li><a href="/servicios" class="hover:text-cyan-500 duration-300">Servicios</a></li>
-          <li><a href="/contacto" class="hover:text-cyan-500 duration-300">Contacto</a></li>
-          <li><a href="/login" class="bg-cyan-500 px-7 py-2.5 rounded-xl">Empezar</a></li>
+          <li><a href="nosotros.html" class="hover:text-cyan-500 duration-300">Nosotros</a></li>
+          <li><a href="galeria.html" class="hover:text-cyan-500 duration-300">Galería</a></li>
+          <li><a href="servicios.html" class="hover:text-cyan-500 duration-300">Servicios</a></li>
+          <li><a href="contacto.html" class="hover:text-cyan-500 duration-300">Contacto</a></li>
+          <li><a href="login.html" class="bg-cyan-500 px-7 py-2.5 rounded-xl">Empezar</a></li>
         </ul>
       </div>
     </nav>
@@ -82,13 +82,21 @@
               <label for="password" class="block text-sm font-medium text-white">Contraseña</label>
               <a href="#" class="text-xs text-neutral-400 hover:text-white">¿Olvidaste tu contraseña?</a>
             </div>
-            <input
-              type="password"
-              id="password"
-              placeholder="••••••••"
-              required
-              class="w-full rounded-lg bg-neutral-800 border border-neutral-700 text-white placeholder-neutral-500 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-white/30"
-            >
+            <div class="relative">
+              <input
+                type="password"
+                id="password"
+                placeholder="•••••••"
+                required
+                class="w-full rounded-lg bg-neutral-800 border border-neutral-700 text-white placeholder-neutral-500 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-white/30 pr-10"
+              >
+              <button type="button" id="togglePassword" class="absolute inset-y-0 right-0 pr-3 flex items-center text-neutral-400 hover:text-white z-10 cursor-pointer">
+                <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </button>
+            </div>
             <p id="passError" class="text-red-400 text-xs mt-1 hidden">Ingresa tu contraseña.</p>
           </div>
 
@@ -101,12 +109,13 @@
         </form>
 
         <p class="text-center text-sm text-neutral-400 mt-3">
-          ¿No tienes cuenta? <a href="#" class="text-white font-semibold hover:underline">Registrate</a>
+          ¿No tienes cuenta? <a href="menu.html" class="text-white font-semibold hover:underline">Registrate</a>
         </p>
       </div>
 
     </div>
   </main>
+  <script src="js/login.js"></script>
 
 </body>
 </html>
