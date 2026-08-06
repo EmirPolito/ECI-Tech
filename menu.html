@@ -23,7 +23,7 @@
           <h1 class="text-2xl font-bold text-[#292929] mt-1">Catálogo de Proyectos & Opciones de Adquisición</h1>
           <p class="text-sm text-gray-500 mt-0.5">Explora las arquitecturas disponibles, especificaciones técnicas y modelos comerciales de licenciamiento.</p>
         </div>
-        <div class="flex items-center gap-3 w-full md:w-auto">
+        <div class="flex items-center gap-3 w-full md:w-auto flex-wrap md:flex-nowrap">
           <div class="bg-gray-50 border border-gray-200 px-4 py-2 rounded-xl text-right w-full md:w-auto">
             <span class="block text-[10px] uppercase tracking-wider text-gray-400 font-semibold">Crédito disponible</span>
             <span class="text-sm font-bold text-[#292929]">$4,500.00 USD</span>
@@ -31,6 +31,11 @@
           <button class="bg-[#292929] text-white text-sm font-medium px-4 py-2.5 rounded-xl hover:bg-black transition-colors whitespace-nowrap shadow-sm">
             Solicitar Personalizado
           </button>
+          <!-- BOTÓN DE CERRAR SESIÓN -->
+          <a href="index.html" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 hover:text-red-600 hover:border-red-200 text-sm font-medium px-4 py-2.5 rounded-xl transition-colors whitespace-nowrap shadow-sm flex items-center justify-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+            Cerrar Sesión
+          </a>
         </div>
       </div>
 
@@ -175,6 +180,7 @@
               </div>
             </div>
           </div>
+
           <!-- PROYECTO 9 -->
           <div class="group rounded-2xl overflow-hidden bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
             <div>
