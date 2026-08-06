@@ -49,6 +49,6 @@
       }
 
       if (valid) {
-        window.location.href = 'menu.php';
+        window.location.href = 'menu.html';
       }
     });
