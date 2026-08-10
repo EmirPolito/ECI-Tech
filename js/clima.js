@@ -40,4 +40,45 @@ async function obtenerCoordenadas(ciudad) {
             estado: codigosClima[datos.current.weather_code] || "Desconocido"
         };
     }
+
+
+    // Dibuja la tarjeta con el resultado del clima
+    function mostrarClima(lugar, clima) {
+        const contenedor = document.getElementById("resultadoClima");
+        contenedor.innerHTML = `
+            <div class="bg-white rounded-xl shadow-md p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900">${lugar.nombre}, ${lugar.pais}</h3>
+                    <p class="text-gray-500">${clima.estado}</p>
+                </div>
+                <div class="flex gap-6 text-center">
+                    <div>
+                        <p class="text-3xl font-bold text-cyan-600">${clima.temperatura}°C</p>
+                        <p class="text-xs text-gray-400">Temperatura</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-slate-700">${clima.viento} km/h</p>
+                        <p class="text-xs text-gray-400">Viento</p>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    // Función principal: busca coordenadas y luego el clima
+    async function buscarClima(ciudad) {
+        const mensaje = document.getElementById("mensajeEstado");
+        const contenedor = document.getElementById("resultadoClima");
+        contenedor.innerHTML = "";
+        mensaje.textContent = "Buscando...";
+
+        try {
+            const lugar = await obtenerCoordenadas(ciudad);
+            const clima = await obtenerClima(lugar.lat, lugar.lon);
+            mensaje.textContent = "";
+            mostrarClima(lugar, clima);
+        } catch (error) {
+            mensaje.textContent = "No se encontró esa ciudad, intenta de nuevo.";
+        }
+    }
 }
