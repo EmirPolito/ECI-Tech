@@ -26,5 +26,30 @@
         </nav>
     </header>
 
+    <section class="text-center py-16 px-4">
+        <span class="inline-block bg-cyan-100 text-cyan-700 text-xs font-bold px-4 py-1 rounded-full mb-4 tracking-wide">
+            CONSUMO DE API
+        </span>
+        <h1 class="text-3xl md:text-4xl font-bold text-slate-900">Clima en tiempo real</h1>
+        <p class="text-gray-500 mt-3 max-w-2xl mx-auto">
+            Consulta el clima actual de cualquier ciudad del mundo.
+        </p>
+
+        <div class="mt-8 flex justify-center gap-2 max-w-md mx-auto">
+            <input id="inputCiudad" type="text" placeholder="Escribe una ciudad..."
+                class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+            <button id="btnBuscar"
+                class="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-5 py-2 rounded-lg whitespace-nowrap">
+                Buscar
+            </button>
+        </div>
+
+        <div class="mt-4 flex justify-center gap-2 flex-wrap">
+            <button class="ciudad-rapida bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-3 py-1 rounded-full">Coatzacoalcos</button>
+            <button class="ciudad-rapida bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-3 py-1 rounded-full">Veracruz</button>
+            <button class="ciudad-rapida bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm px-3 py-1 rounded-full">Ciudad de México</button>
+        </div>
+    </section>
+
 </body>
 </html>
