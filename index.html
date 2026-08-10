@@ -22,20 +22,18 @@
         <h1 class="text-white text-lg font-bold">ECI Tech</h1>
       </div>
       <ul class="hidden md:flex gap-13 text-white text-sm">
-        <li><a href="/nosotros" class="hover:text-cyan-500 duration-300">Nosotros</a></li>
-        <li><a href="/galeria" class="hover:text-cyan-500 duration-300">Galería</a></li>
-        <li><a href="/servicios" class="hover:text-cyan-500 duration-300">Servicios</a></li>
-        <li><a href="/contacto" class="hover:text-cyan-500 duration-300">Contacto</a></li>
+        <li><a href="sobre-nosotros.html" class="hover:text-cyan-500 duration-300">Nosotros</a></li>
+        <li><a href="productos.html" class="hover:text-cyan-500 duration-300">Galería</a></li>
+        <li><a href="contacto.html" class="hover:text-cyan-500 duration-300">Contacto</a></li>
       </ul>
-      <a href="/login" class="hidden md:block text-sm font-medium bg-cyan-500 text-white px-7 py-2.5 rounded-xl hover:scale-105 duration-300">Empezar</a>
+      <a href="login.html" class="hidden md:block text-sm font-medium bg-cyan-500 text-white px-7 py-2.5 rounded-xl hover:scale-105 duration-300">Empezar</a>
       <button id="menu-btn" class="md:hidden text-white text-2xl px-2">☰</button>
       <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-[#0c0c0d] rounded-2xl p-6 z-50">
         <ul class="flex flex-col items-center gap-5 text-white text-sm">
-          <li><a href="/nosotros" class="hover:text-cyan-500 duration-300">Nosotros</a></li>
-          <li><a href="/galeria" class="hover:text-cyan-500 duration-300">Galería</a></li>
-          <li><a href="/servicios" class="hover:text-cyan-500 duration-300">Servicios</a></li>
-          <li><a href="/contacto" class="hover:text-cyan-500 duration-300">Contacto</a></li>
-          <li><a href="/login" class="bg-cyan-500 px-7 py-2.5 rounded-xl">Empezar</a></li>
+          <li><a href="sobre-nosotros.html" class="hover:text-cyan-500 duration-300">Nosotros</a></li>
+          <li><a href="productos.html" class="hover:text-cyan-500 duration-300">Galería</a></li>
+          <li><a href="contacto.html" class="hover:text-cyan-500 duration-300">Contacto</a></li>
+          <li><a href="login.html" class="bg-cyan-500 px-7 py-2.5 rounded-xl">Empezar</a></li>
         </ul>
       </div>
     </nav>
@@ -54,8 +52,8 @@
       calidad y experiencia de usuario.
     </p>
     <div class="flex justify-center gap-3 md:gap-5 mt-15">
-      <a href="/contacto" class="bg-white rounded-xl px-4 py-3.5 text-sm md:px-8 md:py-3 md:text-base shadow-lg hover:shadow-xl duration-300">Agenda diagnostico</a>
-      <a href="/servicios" class="bg-cyan-500 text-white rounded-xl px-4 py-3.5 text-sm md:px-8 md:py-3 md:text-base hover:shadow-xl duration-300">Nuestros servicios</a>
+      <a href="contacto.html" class="bg-white rounded-xl px-4 py-3.5 text-sm md:px-8 md:py-3 md:text-base shadow-lg hover:shadow-xl duration-300">Agenda diagnostico</a>
+      <a href="productos.html" class="bg-cyan-500 text-white rounded-xl px-4 py-3.5 text-sm md:px-8 md:py-3 md:text-base hover:shadow-xl duration-300">Nuestros servicios</a>
     </div>
   </section>
 
@@ -92,7 +90,7 @@
         </div>
         <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 duration-300">
           <span class="text-3xl font-bold text-cyan-400">02</span>
-          <h3 class="text-lg font-semibold text-white mt-3">Diseño &amp; Arquitectura</h3>
+          <h3 class="text-lg font-semibold text-white mt-3">Diseño  Arquitectura</h3>
           <p class="text-sm text-gray-400 mt-2">Creamos wireframes, prototipos y definimos la arquitectura técnica del sistema.</p>
         </div>
         <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 duration-300">
@@ -102,7 +100,7 @@
         </div>
         <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 duration-300">
           <span class="text-3xl font-bold text-cyan-400">04</span>
-          <h3 class="text-lg font-semibold text-white mt-3">Testing &amp; QA</h3>
+          <h3 class="text-lg font-semibold text-white mt-3">Testing QA</h3>
           <p class="text-sm text-gray-400 mt-2">Pruebas exhaustivas de funcionalidad, seguridad y rendimiento antes de cada entrega.</p>
         </div>
         <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 duration-300">
@@ -118,184 +116,203 @@
       </div>
     </div>
   </section>
+  
+<!-- PROYECTOS -->
+<section class="py-8 px-5">
+  <div class="max-w-6xl mx-auto text-center mb-16">
+    <h2 class="text-3xl md:text-5xl font-semibold text-[#292929] mt-6 leading-tight">
+      Proyectos que <br class="hidden md:block" />
+      transformaron negocios
+    </h2>
+    <p class="text-sm md:text-base text-gray-500 max-w-2xl mx-auto mt-3">Algunos de los sitios y aplicaciones que hemos desarrollado para nuestros clientes</p>
+  </div>
+  
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-9">
+    <!-- Proyecto 1 -->
+    <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
+      <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
+        <img src="img/moda-urbana.jpeg" alt="Moda Urbana - Tienda online" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
+          <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
+        </div>
+      </div>
+      <div class="p-6">
+        <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Tienda online + pasarela de pagos</span>
+        <h3 class="text-lg font-semibold text-[#292929] mt-2">Moda Urbana</h3>
+        <p class="text-sm text-gray-500 mt-2">Migración de tienda física a canal digital con catálogo completo, checkout optimizado y sincronización de inventario en tiempo real entre sucursales.</p>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Shopify</span>
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Stripe</span>
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Cloudflare</span>
+        </div>
+      </div>
+    </div>
 
-  <!-- PROYECTOS -->
-  <section class="py-8 px-5">
-    <div class="max-w-6xl mx-auto text-center mb-16">
-      <h2 class="text-3xl md:text-5xl font-semibold text-[#292929] mt-6 leading-tight">
-        Proyectos que <br class="hidden md:block" />
-        transformaron negocios
-      </h2>
-      <p class="text-sm md:text-base text-gray-500 max-w-2xl mx-auto mt-3">Algunos de los sitios y aplicaciones que hemos desarrollado para nuestros clientes</p>
-    </div>
-    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-9">
-      <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
-        <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
-          <span><img src="img/moda-urbana.jpeg" /></span>
-          <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
-            <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
-          </div>
-        </div>
-        <div class="p-6">
-          <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Tienda online + pasarela de pagos</span>
-          <h3 class="text-lg font-semibold text-[#292929] mt-2">Moda Urbana</h3>
-          <p class="text-sm text-gray-500 mt-2">Migración de tienda física a canal digital con catálogo completo, checkout optimizado y sincronización de inventario en tiempo real entre sucursales.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Shopify</span>
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Stripe</span>
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Cloudflare</span>
-          </div>
+    <!-- Proyecto 2 -->
+    <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
+      <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
+        <img src="img/cafe.jpeg" alt="Café Aroma - Landing y reservas" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
+          <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
         </div>
       </div>
-      <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
-        <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
-          <span><img src="img/cafe.jpeg" /></span>
-          <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
-            <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
-          </div>
-        </div>
-        <div class="p-6">
-          <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Landing + sistema de reservas</span>
-          <h3 class="text-lg font-semibold text-[#292929] mt-2">Café Aroma</h3>
-          <p class="text-sm text-gray-500 mt-2">Landing page para cadena de cafeterías con menú digital actualizable, reservas de mesa en línea y galería pensada para conversión desde redes sociales.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Next.js</span>
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Tailwind CSS</span>
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Cloudflare</span>
-          </div>
-        </div>
-      </div>
-      <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
-        <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
-          <span><img src="img/FinTrack.jpeg" /></span>
-          <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
-            <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
-          </div>
-        </div>
-        <div class="p-6">
-          <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Dashboard financiero</span>
-          <h3 class="text-lg font-semibold text-[#292929] mt-2">FinTrack</h3>
-          <p class="text-sm text-gray-500 mt-2">Plataforma de control de gastos para pymes con reportes en tiempo real, roles de usuario y exportación automática de estados financieros.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">React</span>
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Node.js</span>
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">PostgreSQL</span>
-          </div>
-        </div>
-      </div>
-      <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
-        <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
-          <span><img src="img/vidasana.jpeg" /></span>
-          <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
-            <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
-          </div>
-        </div>
-        <div class="p-6">
-          <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Sitio corporativo + citas en línea</span>
-          <h3 class="text-lg font-semibold text-[#292929] mt-2">Clínica VidaSana</h3>
-          <p class="text-sm text-gray-500 mt-2">Sitio institucional para clínica multidisciplinaria con agenda de citas integrada, perfiles de especialistas y formulario de admisión de pacientes.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">WordPress</span>
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Cloudflare</span>
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Google Calendar API</span>
-          </div>
-        </div>
-      </div>
-      <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
-        <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
-          <span><img src="img/ruta.jpeg" /></span>
-          <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
-            <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
-          </div>
-        </div>
-        <div class="p-6">
-          <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">App de logística</span>
-          <h3 class="text-lg font-semibold text-[#292929] mt-2">Ruta Verde</h3>
-          <p class="text-sm text-gray-500 mt-2">Aplicación web para optimizar rutas de recolección de reciclaje, con seguimiento en tiempo real y panel administrativo para operadores.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">React</span>
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Google Maps API</span>
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Firebase</span>
-          </div>
-        </div>
-      </div>
-      <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
-        <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
-          <span><img src="img/despacho.jpeg" /></span>
-          <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
-            <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
-          </div>
-        </div>
-        <div class="p-6">
-          <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Sitio corporativo legal</span>
-          <h3 class="text-lg font-semibold text-[#292929] mt-2">Torres &amp; Asociados</h3>
-          <p class="text-sm text-gray-500 mt-2">Presencia digital para despacho legal con áreas de práctica, casos de éxito y formulario de consulta confidencial con cifrado.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Next.js</span>
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Cloudflare</span>
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">SendGrid</span>
-          </div>
-        </div>
-      </div>
-      <div class="proyecto-extra hidden group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
-        <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
-          <span><img src="img/gym.jpeg" /></span>
-          <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
-            <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
-          </div>
-        </div>
-        <div class="p-6">
-          <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Landing + reservas de clases</span>
-          <h3 class="text-lg font-semibold text-[#292929] mt-2">GymPro</h3>
-          <p class="text-sm text-gray-500 mt-2">Landing comercial para cadena de gimnasios con reserva de clases grupales, planes de membresía y pago recurrente automatizado.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Vue.js</span>
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Stripe</span>
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Cloudflare</span>
-          </div>
-        </div>
-      </div>
-      <div class="proyecto-extra hidden group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
-        <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
-          <span><img src="img/constructora.jpeg" /></span>
-          <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
-            <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
-          </div>
-        </div>
-        <div class="p-6">
-          <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Sitio corporativo + portafolio de obras</span>
-          <h3 class="text-lg font-semibold text-[#292929] mt-2">Constructora Horizonte</h3>
-          <p class="text-sm text-gray-500 mt-2">Sitio corporativo con portafolio de proyectos construidos, línea de tiempo de la empresa y formulario de cotización para nuevos desarrollos.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">WordPress</span>
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Cloudflare</span>
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Google Analytics</span>
-          </div>
-        </div>
-      </div>
-      <div class="proyecto-extra hidden group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
-        <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
-          <span><img src="img/cursos.jpeg" /></span>
-          <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
-            <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
-          </div>
-        </div>
-        <div class="p-6">
-          <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Plataforma de cursos</span>
-          <h3 class="text-lg font-semibold text-[#292929] mt-2">EduOnline</h3>
-          <p class="text-sm text-gray-500 mt-2">Plataforma de e-learning con reproducción de video, seguimiento de progreso por alumno y certificados descargables al completar cada curso.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">React</span>
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">AWS S3</span>
-            <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Stripe</span>
-          </div>
+      <div class="p-6">
+        <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Landing + sistema de reservas</span>
+        <h3 class="text-lg font-semibold text-[#292929] mt-2">Café Aroma</h3>
+        <p class="text-sm text-gray-500 mt-2">Landing page para cadena de cafeterías con menú digital actualizable, reservas de mesa en línea y galería pensada para conversión desde redes sociales.</p>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Next.js</span>
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Tailwind CSS</span>
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Cloudflare</span>
         </div>
       </div>
     </div>
-    <div class="flex justify-center mt-10">
-      <button id="btnVerMas" onclick="toggleProyectos()" class="bg-[#292929] cursor-pointer text-white text-sm font-medium px-8 py-3 rounded-xl hover:bg-[#383838] duration-300">Ver más proyectos</button>
+
+    <!-- Proyecto 3 -->
+    <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
+      <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
+        <img src="img/FinTrack.jpeg" alt="FinTrack - Dashboard financiero" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
+          <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
+        </div>
+      </div>
+      <div class="p-6">
+        <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Dashboard financiero</span>
+        <h3 class="text-lg font-semibold text-[#292929] mt-2">FinTrack</h3>
+        <p class="text-sm text-gray-500 mt-2">Plataforma de control de gastos para pymes con reportes en tiempo real, roles de usuario y exportación automática de estados financieros.</p>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">React</span>
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Node.js</span>
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">PostgreSQL</span>
+        </div>
+      </div>
     </div>
-  </section>
+
+    <!-- Proyecto 4 -->
+    <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
+      <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
+        <img src="img/vidasana.jpeg" alt="Clínica VidaSana - Sitio corporativo" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
+          <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
+        </div>
+      </div>
+      <div class="p-6">
+        <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Sitio corporativo + citas en línea</span>
+        <h3 class="text-lg font-semibold text-[#292929] mt-2">Clínica VidaSana</h3>
+        <p class="text-sm text-gray-500 mt-2">Sitio institucional para clínica multidisciplinaria con agenda de citas integrada, perfiles de especialistas y formulario de admisión de pacientes.</p>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">WordPress</span>
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Cloudflare</span>
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Google Calendar API</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proyecto 5 -->
+    <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
+      <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
+        <img src="img/ruta.jpeg" alt="Ruta Verde - App de logística" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
+          <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
+        </div>
+      </div>
+      <div class="p-6">
+        <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">App de logística</span>
+        <h3 class="text-lg font-semibold text-[#292929] mt-2">Ruta Verde</h3>
+        <p class="text-sm text-gray-500 mt-2">Aplicación web para optimizar rutas de recolección de reciclaje, con seguimiento en tiempo real y panel administrativo para operadores.</p>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">React</span>
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Google Maps API</span>
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Firebase</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proyecto 6 -->
+    <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
+      <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
+        <img src="img/despacho.jpeg" alt="Torres & Asociados - Sitio legal" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
+          <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
+        </div>
+      </div>
+      <div class="p-6">
+        <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Sitio corporativo legal</span>
+        <h3 class="text-lg font-semibold text-[#292929] mt-2">Torres &amp; Asociados</h3>
+        <p class="text-sm text-gray-500 mt-2">Presencia digital para despacho legal con áreas de práctica, casos de éxito y formulario de consulta confidencial con cifrado.</p>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Next.js</span>
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Cloudflare</span>
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">SendGrid</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proyecto 7 (Extra) -->
+    <div class="proyecto-extra hidden group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
+      <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
+        <img src="img/gym.jpeg" alt="GymPro - Landing y reservas" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
+          <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
+        </div>
+      </div>
+      <div class="p-6">
+        <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Landing + reservas de clases</span>
+        <h3 class="text-lg font-semibold text-[#292929] mt-2">GymPro</h3>
+        <p class="text-sm text-gray-500 mt-2">Landing comercial para cadena de gimnasios con reserva de clases grupales, planes de membresía y pago recurrente automatizado.</p>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Vue.js</span>
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Stripe</span>
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Cloudflare</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proyecto 8 (Extra) -->
+    <div class="proyecto-extra hidden group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
+      <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
+        <img src="img/constructora.jpeg" alt="Constructora Horizonte - Portafolio" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
+          <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
+        </div>
+      </div>
+      <div class="p-6">
+        <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Sitio corporativo + portafolio de obras</span>
+        <h3 class="text-lg font-semibold text-[#292929] mt-2">Constructora Horizonte</h3>
+        <p class="text-sm text-gray-500 mt-2">Sitio corporativo con portafolio de proyectos construidos, línea de tiempo de la empresa y formulario de cotización para nuevos desarrollos.</p>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">WordPress</span>
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Cloudflare</span>
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Google Analytics</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proyecto 9 (Extra) -->
+    <div class="proyecto-extra hidden group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl duration-300">
+      <div class="relative h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
+        <img src="img/cursos.jpeg" alt="EduOnline - Plataforma de cursos" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-[#292929]/0 group-hover:bg-[#292929]/50 duration-300 flex items-center justify-center">
+          <a href="#" class="opacity-0 group-hover:opacity-100 duration-300 bg-white text-[#292929] text-sm font-medium px-5 py-2.5 rounded-xl">Ver proyecto</a>
+        </div>
+      </div>
+      <div class="p-6">
+        <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200">Plataforma de cursos</span>
+        <h3 class="text-lg font-semibold text-[#292929] mt-2">EduOnline</h3>
+        <p class="text-sm text-gray-500 mt-2">Plataforma de e-learning con reproducción de video, seguimiento de progreso por alumno y certificados descargables al completar cada curso.</p>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">React</span>
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">AWS S3</span>
+          <span class="text-xs text-gray-500 bg-gray-100 px-2.5 py-1 rounded-full">Stripe</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex justify-center mt-10">
+    <button id="btnVerMas" onclick="toggleProyectos()" class="bg-[#292929] cursor-pointer text-white text-sm font-medium px-8 py-3 rounded-xl hover:bg-[#383838] duration-300">Ver más proyectos</button>
+  </div>
+</section>
 
   <!-- PRECIOS -->
   <section class="py-20 px-4">
