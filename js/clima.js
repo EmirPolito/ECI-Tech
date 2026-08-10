@@ -81,4 +81,26 @@ async function obtenerCoordenadas(ciudad) {
             mensaje.textContent = "No se encontró esa ciudad, intenta de nuevo.";
         }
     }
+
+
+    // Eventos del buscador
+    document.getElementById("btnBuscar").addEventListener("click", () => {
+        const ciudad = document.getElementById("inputCiudad").value.trim();
+        if (ciudad) buscarClima(ciudad);
+    });
+
+    document.getElementById("inputCiudad").addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+            const ciudad = document.getElementById("inputCiudad").value.trim();
+            if (ciudad) buscarClima(ciudad);
+        }
+    });
+
+    // Botones de ciudades rápidas
+    document.querySelectorAll(".ciudad-rapida").forEach(boton => {
+        boton.addEventListener("click", () => {
+            document.getElementById("inputCiudad").value = boton.textContent;
+            buscarClima(boton.textContent);
+        });
+    });
 }
