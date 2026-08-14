@@ -3,321 +3,245 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Panel de Proyectos y Soluciones - Sistema</title>
+  <title>Panel de Servicios - Dashboard</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 font-sans antialiased text-[#292929]">
+<body class="bg-gray-50 font-sans antialiased">
 
-  <!-- CONTENEDOR PRINCIPAL DEL DASHBOARD / VISTA DE USUARIO AUTENTICADO -->
-  <main class="min-h-screen py-10 px-4 md:px-8">
-    <div class="max-w-7xl mx-auto">
+  <!-- NAVBAR / CABECERA DEL DASHBOARD -->
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Logotipo / Marca -->
+      <div class="flex items-center space-x-3">
+        <span class="bg-[#292929] text-white font-bold px-3 py-1.5 rounded-xl text-sm">Dashboard</span>
+        <span class="text-sm font-medium text-gray-700 hidden sm:inline">Panel de Control de Servicios</span>
+      </div>
 
-      <!-- BARRA DE BIENVENIDA / ESTADO DE CUENTA (Interfaz interna) -->
-      <div class="bg-white border border-gray-200 rounded-2xl p-6 mb-10 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-        <div>
-          <div class="flex items-center gap-2">
-            <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span class="text-xs font-semibold text-emerald-600 uppercase tracking-wider">Sesión Activa / Plan Pro</span>
+      <!-- Usuario y Botón de Cerrar Sesión -->
+      <div class="flex items-center space-x-4">
+        <div class="hidden md:flex items-center space-x-2 border-r border-gray-200 pr-4">
+          <div class="w-8 h-8 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-sm">
+            US
           </div>
-          <h1 class="text-2xl font-bold text-[#292929] mt-1">Catálogo de Proyectos & Opciones de Adquisición</h1>
-          <p class="text-sm text-gray-500 mt-0.5">Explora las arquitecturas disponibles, especificaciones técnicas y modelos comerciales de licenciamiento.</p>
+          <span class="text-sm font-medium text-gray-700">Usuario Activo</span>
         </div>
-        <div class="flex items-center gap-3 w-full md:w-auto flex-wrap md:flex-nowrap">
-          <div class="bg-gray-50 border border-gray-200 px-4 py-2 rounded-xl text-right w-full md:w-auto">
-            <span class="block text-[10px] uppercase tracking-wider text-gray-400 font-semibold">Crédito disponible</span>
-            <span class="text-sm font-bold text-[#292929]">$4,500.00 USD</span>
+        
+        <button onclick="cerrarSesion()" class="flex items-center space-x-1.5 bg-red-50 hover:bg-red-100 text-red-600 text-sm font-medium px-4 py-2 rounded-xl transition-colors duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+          </svg>
+          <span>Cerrar sesión</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL: SERVICIOS DETALLADOS -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    
+    <!-- Título de Sección -->
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h1 class="text-3xl md:text-4xl font-semibold text-[#292929] tracking-tight">
+        Servicios y Soluciones Activas
+      </h1>
+      <p class="text-gray-500 mt-2 text-sm md:text-base">
+        Explora la información detallada, especificaciones técnicas y recursos disponibles para cada uno de los servicios contratados o habilitados en tu cuenta.
+      </p>
+    </div>
+
+    <!-- Grid de Tarjetas de Servicios -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+      
+      <!-- Servicio 1: Tienda Online + Pasarela de Pagos -->
+      <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group">
+        <div class="relative h-48 bg-gray-200 overflow-hidden">
+          <img src="img/moda-urbana.jpeg" alt="Tienda online" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full text-xs font-semibold text-[#292929] shadow-sm">
+            E-commerce
           </div>
-          <button class="bg-[#292929] text-white text-sm font-medium px-4 py-2.5 rounded-xl hover:bg-black transition-colors whitespace-nowrap shadow-sm">
-            Solicitar Personalizado
-          </button>
-          <!-- BOTÓN DE CERRAR SESIÓN -->
-          <a href="index.html" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 hover:text-red-600 hover:border-red-200 text-sm font-medium px-4 py-2.5 rounded-xl transition-colors whitespace-nowrap shadow-sm flex items-center justify-center gap-2">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
-            Cerrar Sesión
-          </a>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-[#292929]">Tienda Online Avanzada</h3>
+            <p class="text-sm text-gray-500 mt-2">
+              Despliegue integral de comercio electrónico optimizado para altas conversiones, sincronización de inventario global y seguridad antifraude.
+            </p>
+            <div class="mt-4 pt-4 border-t border-gray-100 space-y-2 text-xs text-gray-600">
+              <div class="flex justify-between"><span>Estado:</span> <span class="font-semibold text-green-600">Operativo</span></div>
+              <div class="flex justify-between"><span>Pasarela de pagos:</span> <span class="font-semibold">Stripe / PayPal</span></div>
+              <div class="flex justify-between"><span>Sincronización:</span> <span class="font-semibold">Tiempo real (API)</span></div>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400">Soporte 24/7 incluido</span>
+            <button class="bg-[#292929] hover:bg-[#383838] text-white text-xs font-medium px-4 py-2 rounded-xl transition-colors">
+              Administrar
+            </button>
+          </div>
         </div>
       </div>
 
-      <!-- SECCIÓN DE PROYECTOS / TARJETAS DETALLADAS -->
-      <section>
-        <div class="mb-8">
-          <h2 class="text-xl font-bold text-[#292929]">Soluciones Tecnológicas Listas para Desplegar</h2>
-          <p class="text-sm text-gray-500">Selecciona un modelo para ver la desglose de costos, módulos incluidos y tiempos de entrega estimados en tu cuenta.</p>
+      <!-- Servicio 2: Landing y Sistemas de Reservas -->
+      <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group">
+        <div class="relative h-48 bg-gray-200 overflow-hidden">
+          <img src="img/cafe.jpeg" alt="Landing y reservas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full text-xs font-semibold text-[#292929] shadow-sm">
+            Conversión
+          </div>
         </div>
-
-        <!-- GRID DE TARJETAS (Parte 1: Proyectos 1 a 4) -->
-        <div class="grid md:grid-cols-3 gap-8">
-          
-          <!-- PROYECTO 1 -->
-          <div class="group rounded-2xl overflow-hidden bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
-            <div>
-              <div class="relative h-48 bg-gray-200 flex items-center justify-center overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800" alt="Moda Urbana" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-full">ID: PRJ-001</div>
-              </div>
-              <div class="p-6">
-                <div class="flex items-center justify-between">
-                  <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200 bg-gray-50">E-Commerce</span>
-                  <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Stock Disponible</span>
-                </div>
-                <h3 class="text-xl font-bold text-[#292929] mt-3">Moda Urbana</h3>
-                <p class="text-sm text-gray-500 mt-2 leading-relaxed">Migración integral de tienda física a canal digital con catálogo completo y checkout optimizado.</p>
-                
-                <div class="mt-5 space-y-2 border-t border-gray-100 pt-4 text-xs text-gray-600">
-                  <div class="flex justify-between"><span class="text-gray-400">Tiempo de entrega:</span><span class="font-semibold text-[#292929]">3 a 4 semanas</span></div>
-                  <div class="flex justify-between"><span class="text-gray-400">Licenciamiento:</span><span class="font-semibold text-[#292929]">Pago Único + SaaS</span></div>
-                  <div class="flex justify-between"><span class="text-gray-400">Soporte técnico:</span><span class="font-semibold text-[#292929]">Incluido (3 meses)</span></div>
-                </div>
-
-                <div class="mt-5 pt-4 border-t border-gray-100 bg-gray-50 -mx-6 -mb-6 p-6">
-                  <div class="flex items-baseline justify-between mb-1">
-                    <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Inversión Inicial:</span>
-                    <span class="text-xl font-bold text-[#292929]">$1,800 USD</span>
-                  </div>
-                  <p class="text-[11px] text-gray-400">Tarifa recurrente opcional: $150 USD/mes.</p>
-                  <button class="w-full mt-4 bg-[#292929] hover:bg-black text-white text-sm font-medium py-2.5 rounded-xl transition-colors shadow-sm">Desplegar e Instalar</button>
-                </div>
-              </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-[#292929]">Landing + Reservas en Línea</h3>
+            <p class="text-sm text-gray-500 mt-2">
+              Plataforma web de alta velocidad enfocada en captación de leads, gestión de citas y menús interactivos actualizables al instante.
+            </p>
+            <div class="mt-4 pt-4 border-t border-gray-100 space-y-2 text-xs text-gray-600">
+              <div class="flex justify-between"><span>Estado:</span> <span class="font-semibold text-green-600">Operativo</span></div>
+              <div class="flex justify-between"><span>Tecnología:</span> <span class="font-semibold">Next.js / Tailwind</span></div>
+              <div class="flex justify-between"><span>Velocidad (Lighthouse):</span> <span class="font-semibold text-cyan-600">99/100</span></div>
             </div>
           </div>
-
-          <!-- PROYECTO 2 -->
-          <div class="group rounded-2xl overflow-hidden bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
-            <div>
-              <div class="relative h-48 bg-gray-200 flex items-center justify-center overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800" alt="Café Aroma" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-full">ID: PRJ-002</div>
-              </div>
-              <div class="p-6">
-                <div class="flex items-center justify-between">
-                  <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200 bg-gray-50">Landing & Reservas</span>
-                  <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Alta Demanda</span>
-                </div>
-                <h3 class="text-xl font-bold text-[#292929] mt-3">Café Aroma</h3>
-                <p class="text-sm text-gray-500 mt-2 leading-relaxed">Landing page para cadena de cafeterías con menú digital actualizable y reservas de mesa en línea.</p>
-                
-                <div class="mt-5 space-y-2 border-t border-gray-100 pt-4 text-xs text-gray-600">
-                  <div class="flex justify-between"><span class="text-gray-400">Tiempo de entrega:</span><span class="font-semibold text-[#292929]">2 semanas</span></div>
-                  <div class="flex justify-between"><span class="text-gray-400">Licenciamiento:</span><span class="font-semibold text-[#292929]">Llave en mano</span></div>
-                  <div class="flex justify-between"><span class="text-gray-400">Soporte técnico:</span><span class="font-semibold text-[#292929]">Incluido (1 mes)</span></div>
-                </div>
-
-                <div class="mt-5 pt-4 border-t border-gray-100 bg-gray-50 -mx-6 -mb-6 p-6">
-                  <div class="flex items-baseline justify-between mb-1">
-                    <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Inversión Inicial:</span>
-                    <span class="text-xl font-bold text-[#292929]">$950 USD</span>
-                  </div>
-                  <p class="text-[11px] text-gray-400">Sin costos mensuales obligatorios de plataforma.</p>
-                  <button class="w-full mt-4 bg-[#292929] hover:bg-black text-white text-sm font-medium py-2.5 rounded-xl transition-colors shadow-sm">Desplegar e Instalar</button>
-                </div>
-              </div>
-            </div>
+          <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400">Optimizado SEO</span>
+            <button class="bg-[#292929] hover:bg-[#383838] text-white text-xs font-medium px-4 py-2 rounded-xl transition-colors">
+              Administrar
+            </button>
           </div>
-
-          <!-- PROYECTO 3 -->
-          <div class="group rounded-2xl overflow-hidden bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
-            <div>
-              <div class="relative h-48 bg-gray-200 flex items-center justify-center overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="FinTrack" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-full">ID: PRJ-003</div>
-              </div>
-              <div class="p-6">
-                <div class="flex items-center justify-between">
-                  <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200 bg-gray-50">SaaS / Dashboard</span>
-                  <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">Enterprise</span>
-                </div>
-                <h3 class="text-xl font-bold text-[#292929] mt-3">FinTrack</h3>
-                <p class="text-sm text-gray-500 mt-2 leading-relaxed">Plataforma de control de gastos para pymes con reportes en tiempo real y exportación de datos.</p>
-                
-                <div class="mt-5 space-y-2 border-t border-gray-100 pt-4 text-xs text-gray-600">
-                  <div class="flex justify-between"><span class="text-gray-400">Tiempo de entrega:</span><span class="font-semibold text-[#292929]">6 a 8 semanas</span></div>
-                  <div class="flex justify-between"><span class="text-gray-400">Licenciamiento:</span><span class="font-semibold text-[#292929]">Desarrollo por sprints</span></div>
-                  <div class="flex justify-between"><span class="text-gray-400">Soporte técnico:</span><span class="font-semibold text-[#292929]">Garantía extendida</span></div>
-                </div>
-
-                <div class="mt-5 pt-4 border-t border-gray-100 bg-gray-50 -mx-6 -mb-6 p-6">
-                  <div class="flex items-baseline justify-between mb-1">
-                    <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Inversión Inicial:</span>
-                    <span class="text-xl font-bold text-[#292929]">$3,200 USD</span>
-                  </div>
-                  <p class="text-[11px] text-gray-400">Posibilidad de financiamiento en 3 parcialidades.</p>
-                  <button class="w-full mt-4 bg-[#292929] hover:bg-black text-white text-sm font-medium py-2.5 rounded-xl transition-colors shadow-sm">Desplegar e Instalar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- PROYECTO 4 -->
-          <div class="group rounded-2xl overflow-hidden bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
-            <div>
-              <div class="relative h-48 bg-gray-200 flex items-center justify-center overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=800" alt="EduLearn" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-full">ID: PRJ-004</div>
-              </div>
-              <div class="p-6">
-                <div class="flex items-center justify-between">
-                  <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200 bg-gray-50">EdTech LMS</span>
-                  <span class="text-xs font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded">En Desarrollo</span>
-                </div>
-                <h3 class="text-xl font-bold text-[#292929] mt-3">EduLearn</h3>
-                <p class="text-sm text-gray-500 mt-2 leading-relaxed">Plataforma educativa con gestión de cursos, exámenes interactivos y foros de discusión.</p>
-                
-                <div class="mt-5 space-y-2 border-t border-gray-100 pt-4 text-xs text-gray-600">
-                  <div class="flex justify-between"><span class="text-gray-400">Tiempo de entrega:</span><span class="font-semibold text-[#292929]">4 a 5 semanas</span></div>
-                  <div class="flex justify-between"><span class="text-gray-400">Licenciamiento:</span><span class="font-semibold text-[#292929]">SaaS Mensual</span></div>
-                  <div class="flex justify-between"><span class="text-gray-400">Soporte técnico:</span><span class="font-semibold text-[#292929]">Continuo</span></div>
-                </div>
-
-                <div class="mt-5 pt-4 border-t border-gray-100 bg-gray-50 -mx-6 -mb-6 p-6">
-                  <div class="flex items-baseline justify-between mb-1">
-                    <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Inversión Inicial:</span>
-                    <span class="text-xl font-bold text-[#292929]">$2,500 USD</span>
-                  </div>
-                  <p class="text-[11px] text-gray-400">Soporte a más de 10,000 usuarios concurrentes.</p>
-                  <button class="w-full mt-4 bg-[#292929] hover:bg-black text-white text-sm font-medium py-2.5 rounded-xl transition-colors shadow-sm">Desplegar e Instalar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- PROYECTO 9 -->
-          <div class="group rounded-2xl overflow-hidden bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
-            <div>
-              <div class="relative h-48 bg-gray-200 flex items-center justify-center overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=800" alt="FitLife Tracker" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-full">ID: PRJ-009</div>
-              </div>
-              <div class="p-6">
-                <div class="flex items-center justify-between">
-                  <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200 bg-gray-50">Fitness SaaS</span>
-                  <span class="text-xs font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded">En Desarrollo</span>
-                </div>
-                <h3 class="text-xl font-bold text-[#292929] mt-3">FitLife Tracker</h3>
-                <p class="text-sm text-gray-500 mt-2 leading-relaxed">Software para gimnasios y entrenadores con rutinas en video, seguimiento calórico y control de pagos.</p>
-                
-                <div class="mt-5 space-y-2 border-t border-gray-100 pt-4 text-xs text-gray-600">
-                  <div class="flex justify-between"><span class="text-gray-400">Tiempo de entrega:</span><span class="font-semibold text-[#292929]">4 semanas</span></div>
-                  <div class="flex justify-between"><span class="text-gray-400">Licenciamiento:</span><span class="font-semibold text-[#292929]">SaaS / White-label</span></div>
-                  <div class="flex justify-between"><span class="text-gray-400">Soporte técnico:</span><span class="font-semibold text-[#292929]">Mantenimiento Activo</span></div>
-                </div>
-
-                <div class="mt-5 pt-4 border-t border-gray-100 bg-gray-50 -mx-6 -mb-6 p-6">
-                  <div class="flex items-baseline justify-between mb-1">
-                    <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Inversión Inicial:</span>
-                    <span class="text-xl font-bold text-[#292929]">$1,500 USD</span>
-                  </div>
-                  <p class="text-[11px] text-gray-400">Aplicación 100% responsiva (móvil y escritorio).</p>
-                  <button class="w-full mt-4 bg-[#292929] hover:bg-black text-white text-sm font-medium py-2.5 rounded-xl transition-colors shadow-sm">Desplegar e Instalar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- PROYECTO 10 -->
-          <div class="group rounded-2xl overflow-hidden bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
-            <div>
-              <div class="relative h-48 bg-gray-200 flex items-center justify-center overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=800" alt="TravelX Booking" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-full">ID: PRJ-010</div>
-              </div>
-              <div class="p-6">
-                <div class="flex items-center justify-between">
-                  <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200 bg-gray-50">Booking Platform</span>
-                  <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">Enterprise</span>
-                </div>
-                <h3 class="text-xl font-bold text-[#292929] mt-3">TravelX Reservas</h3>
-                <p class="text-sm text-gray-500 mt-2 leading-relaxed">Motor de reservas de turismo y vuelos con conexión por API y generación automática de vouchers.</p>
-                
-                <div class="mt-5 space-y-2 border-t border-gray-100 pt-4 text-xs text-gray-600">
-                  <div class="flex justify-between"><span class="text-gray-400">Tiempo de entrega:</span><span class="font-semibold text-[#292929]">7 a 9 semanas</span></div>
-                  <div class="flex justify-between"><span class="text-gray-400">Licenciamiento:</span><span class="font-semibold text-[#292929]">Desarrollo por módulos</span></div>
-                  <div class="flex justify-between"><span class="text-gray-400">Soporte técnico:</span><span class="font-semibold text-[#292929]">Garantía extendida</span></div>
-                </div>
-
-                <div class="mt-5 pt-4 border-t border-gray-100 bg-gray-50 -mx-6 -mb-6 p-6">
-                  <div class="flex items-baseline justify-between mb-1">
-                    <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Inversión Inicial:</span>
-                    <span class="text-xl font-bold text-[#292929]">$3,500 USD</span>
-                  </div>
-                  <p class="text-[11px] text-gray-400">Integración con APIs globales de hotelería.</p>
-                  <button class="w-full mt-4 bg-[#292929] hover:bg-black text-white text-sm font-medium py-2.5 rounded-xl transition-colors shadow-sm">Desplegar e Instalar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- PROYECTO 11 -->
-          <div class="group rounded-2xl overflow-hidden bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
-            <div>
-              <div class="relative h-48 bg-gray-200 flex items-center justify-center overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" alt="HR Connect" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-full">ID: PRJ-011</div>
-              </div>
-              <div class="p-6">
-                <div class="flex items-center justify-between">
-                  <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200 bg-gray-50">HR System</span>
-                  <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Alta Demanda</span>
-                </div>
-                <h3 class="text-xl font-bold text-[#292929] mt-3">HR Connect</h3>
-                <p class="text-sm text-gray-500 mt-2 leading-relaxed">Intranet de recursos humanos con control de nóminas, días libres y reloj checador digital.</p>
-                
-                <div class="mt-5 space-y-2 border-t border-gray-100 pt-4 text-xs text-gray-600">
-                  <div class="flex justify-between"><span class="text-gray-400">Tiempo de entrega:</span><span class="font-semibold text-[#292929]">4 semanas</span></div>
-                  <div class="flex justify-between"><span class="text-gray-400">Licenciamiento:</span><span class="font-semibold text-[#292929]">Pago Único</span></div>
-                  <div class="flex justify-between"><span class="text-gray-400">Soporte técnico:</span><span class="font-semibold text-[#292929]">Incluido (3 meses)</span></div>
-                </div>
-
-                <div class="mt-5 pt-4 border-t border-gray-100 bg-gray-50 -mx-6 -mb-6 p-6">
-                  <div class="flex items-baseline justify-between mb-1">
-                    <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Inversión Inicial:</span>
-                    <span class="text-xl font-bold text-[#292929]">$2,100 USD</span>
-                  </div>
-                  <p class="text-[11px] text-gray-400">Sin límite de registros de empleados activos.</p>
-                  <button class="w-full mt-4 bg-[#292929] hover:bg-black text-white text-sm font-medium py-2.5 rounded-xl transition-colors shadow-sm">Desplegar e Instalar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- PROYECTO 12 -->
-          <div class="group rounded-2xl overflow-hidden bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
-            <div>
-              <div class="relative h-48 bg-gray-200 flex items-center justify-center overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800" alt="EventMaster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-full">ID: PRJ-012</div>
-              </div>
-              <div class="p-6">
-                <div class="flex items-center justify-between">
-                  <span class="text-[#565656] text-xs font-semibold px-2.5 py-1 rounded-full border border-gray-200 bg-gray-50">Ticketing Web</span>
-                  <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Stock Disponible</span>
-                </div>
-                <h3 class="text-xl font-bold text-[#292929] mt-3">EventMaster</h3>
-                <p class="text-sm text-gray-500 mt-2 leading-relaxed">Plataforma de venta de boletos con selección visual de asientos, códigos QR y app de escaneo.</p>
-                
-                <div class="mt-5 space-y-2 border-t border-gray-100 pt-4 text-xs text-gray-600">
-                  <div class="flex justify-between"><span class="text-gray-400">Tiempo de entrega:</span><span class="font-semibold text-[#292929]">3 a 4 semanas</span></div>
-                  <div class="flex justify-between"><span class="text-gray-400">Licenciamiento:</span><span class="font-semibold text-[#292929]">SaaS % Comisiones</span></div>
-                  <div class="flex justify-between"><span class="text-gray-400">Soporte técnico:</span><span class="font-semibold text-[#292929]">Especializado</span></div>
-                </div>
-
-                <div class="mt-5 pt-4 border-t border-gray-100 bg-gray-50 -mx-6 -mb-6 p-6">
-                  <div class="flex items-baseline justify-between mb-1">
-                    <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Inversión Inicial:</span>
-                    <span class="text-xl font-bold text-[#292929]">$1,600 USD</span>
-                  </div>
-                  <p class="text-[11px] text-gray-400">Modelo escalable para eventos masivos.</p>
-                  <button class="w-full mt-4 bg-[#292929] hover:bg-black text-white text-sm font-medium py-2.5 rounded-xl transition-colors shadow-sm">Desplegar e Instalar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
-      </section>
+      </div>
+
+      <!-- Servicio 3: Dashboards Financieros -->
+      <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group">
+        <div class="relative h-48 bg-gray-200 overflow-hidden">
+          <img src="img/FinTrack.jpeg" alt="Dashboard financiero" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full text-xs font-semibold text-[#292929] shadow-sm">
+            Analítica
+          </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-[#292929]">Dashboard Financiero (Pymes)</h3>
+            <p class="text-sm text-gray-500 mt-2">
+              Módulo de control presupuestario, reportería gerencial en tiempo real, control de accesos por roles y exportación automática a Excel/PDF.
+            </p>
+            <div class="mt-4 pt-4 border-t border-gray-100 space-y-2 text-xs text-gray-600">
+              <div class="flex justify-between"><span>Estado:</span> <span class="font-semibold text-green-600">Operativo</span></div>
+              <div class="flex justify-between"><span>Base de datos:</span> <span class="font-semibold">PostgreSQL (Cifrada)</span></div>
+              <div class="flex justify-between"><span>Reportes:</span> <span class="font-semibold">Automáticos diarios</span></div>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400">Backup automático</span>
+            <button class="bg-[#292929] hover:bg-[#383838] text-white text-xs font-medium px-4 py-2 rounded-xl transition-colors">
+              Administrar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Servicio 4: Sitios Corporativos y Citas Médicas -->
+      <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group">
+        <div class="relative h-48 bg-gray-200 overflow-hidden">
+          <img src="img/vidasana.jpeg" alt="Sitio corporativo salud" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full text-xs font-semibold text-[#292929] shadow-sm">
+            Institucional
+          </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-[#292929]">Portal Corporativo + Agenda</h3>
+            <p class="text-sm text-gray-500 mt-2">
+              Sitio web institucional con directorio de especialistas, integración directa con calendarios y formularios con protocolos de privacidad avanzados.
+            </p>
+            <div class="mt-4 pt-4 border-t border-gray-100 space-y-2 text-xs text-gray-600">
+              <div class="flex justify-between"><span>Estado:</span> <span class="font-semibold text-green-600">Operativo</span></div>
+              <div class="flex justify-between"><span>Integración:</span> <span class="font-semibold">Google Calendar API</span></div>
+              <div class="flex justify-between"><span>Seguridad:</span> <span class="font-semibold">SSL Wildcard</span></div>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400">Actualización CMS</span>
+            <button class="bg-[#292929] hover:bg-[#383838] text-white text-xs font-medium px-4 py-2 rounded-xl transition-colors">
+              Administrar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Servicio 5: Aplicaciones de Logística -->
+      <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group">
+        <div class="relative h-48 bg-gray-200 overflow-hidden">
+          <img src="img/ruta.jpeg" alt="App de logística" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full text-xs font-semibold text-[#292929] shadow-sm">
+            Logística
+          </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-[#292929]">Optimización de Rutas y Flotas</h3>
+            <p class="text-sm text-gray-500 mt-2">
+              Software de rastreo y distribución geoespacial con telemetría en tiempo real, gestión de despachos y asignación inteligente de tareas.
+            </p>
+            <div class="mt-4 pt-4 border-t border-gray-100 space-y-2 text-xs text-gray-600">
+              <div class="flex justify-between"><span>Estado:</span> <span class="font-semibold text-green-600">Operativo</span></div>
+              <div class="flex justify-between"><span>Mapeo:</span> <span class="font-semibold">Google Maps API Pro</span></div>
+              <div class="flex justify-between"><span>Notificaciones:</span> <span class="font-semibold">Push / Firebase</span></div>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400">Monitoreo activo</span>
+            <button class="bg-[#292929] hover:bg-[#383838] text-white text-xs font-medium px-4 py-2 rounded-xl transition-colors">
+              Administrar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Servicio 6: Plataformas E-learning / Cursos -->
+      <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group">
+        <div class="relative h-48 bg-gray-200 overflow-hidden">
+          <img src="img/cursos.jpeg" alt="Plataforma de cursos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full text-xs font-semibold text-[#292929] shadow-sm">
+            Educación
+          </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-[#292929]">Academia Virtual (E-learning)</h3>
+            <p class="text-sm text-gray-500 mt-2">
+              Plataforma interactiva de gestión educativa con reproductor multimedia optimizado, tracking de calificaciones y emisión de diplomas automáticos.
+            </p>
+            <div class="mt-4 pt-4 border-t border-gray-100 space-y-2 text-xs text-gray-600">
+              <div class="flex justify-between"><span>Estado:</span> <span class="font-semibold text-green-600">Operativo</span></div>
+              <div class="flex justify-between"><span>Streaming:</span> <span class="font-semibold">AWS S3 + CDN</span></div>
+              <div class="flex justify-between"><span>Certificados:</span> <span class="font-semibold">PDF Dinámicos</span></div>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-xs text-gray-400">Ancho de banda ilimitado</span>
+            <button class="bg-[#292929] hover:bg-[#383838] text-white text-xs font-medium px-4 py-2 rounded-xl transition-colors">
+              Administrar
+            </button>
+          </div>
+        </div>
+      </div>
 
     </div>
   </main>
+
+  <!-- SCRIPT PARA CERRAR SESIÓN -->
+  <script>
+    function cerrarSesion() {
+      // Aquí puedes agregar la lógica para limpiar tokens (ej. localStorage.removeItem('token'))
+      // y redirigir al usuario al login o página principal pública.
+      if (confirm("¿Estás seguro de que deseas cerrar sesión?")) {
+        window.location.href = "index.html"; // Redirige a la página principal de inicio
+      }
+    }
+  </script>
 
 </body>
 </html>
